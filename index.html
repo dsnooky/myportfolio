@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #111, #444);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+        nav {
+            background: #222;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .hero {
+            padding: 70px 20px;
+            text-align: center;
+            background: #fff;
+            animation: slideUp 1.3s ease;
+        }
+        .hero img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+            animation: fadeIn 1.5s ease;
+        }
+        h2 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;} to {opacity: 1;}
+        }
+        @keyframes slideUp {
+            from {transform: translateY(30px); opacity: 0;} to {transform: translateY(0); opacity: 1;}
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 26px;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Snooky Delos Reyes</h1>
+        <p>Your Friendly Digital Assistant</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <img src="https://via.placeholder.com/150" alt="Profile Image" />
+        <h1>Welcome to My Portfolio</h1>
+        <p>I create digital works, templates, websites, and more.</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a digital assistant specializing in resume making, editing, content creation, website building, and admin documentation assistance such as SSS Registration, Pag-ibig, NBI, Police Clearance, and DFA Appointment help.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Resume & Cover Letter Writing</li>
+            <li>Website Building (E-commerce, Business, Personal)</li>
+            <li>Content Creation & Editing</li>
+            <li>Excel & Digital Templates</li>
+            <li>Government Document Assistance</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Resume Template</h3>
+                <p>A clean and professional layout for job seekers.</p>
+            </div>
+            <div class="project-card">
+                <h3>Business Website</h3>
+                <p>Simple, responsive, and modern website for small businesses.</p>
+            </div>
+            <div class="project-card">
+                <h3>Content Creation</h3>
+                <p>Social media graphics and branding materials.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email me at: <strong>your-email@example.com</strong></p>
+    </section>
+
+    <footer>
+        © 2025 Snooky Delos Reyes — All Rights Reserved
+    </footer>
+</body>
+</html>
