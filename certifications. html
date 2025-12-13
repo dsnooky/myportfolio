@@ -1,0 +1,129 @@
+<!-- Certifications Section with Hover Animation and Modal -->
+<section id="certifications" style="background-color: #FFF0F5; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+  <div style="text-align: center; margin-bottom: 40px;">
+    <h2 style="color: #FF69B4; font-size: 2.5rem;">Certifications</h2>
+    <p style="color: #FFB6C1; font-size: 1.1rem;">Showcasing my skills and achievements</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Certificate Item 1 -->
+    <div class="cert-item" onclick="openModal('google-cert.png', 'Google IT Support Professional', 'Google | Jan 2025')">
+      <img src="google-cert.png" alt="Google IT Support Certificate">
+      <h3>Google IT Support Professional</h3>
+      <p>Google | Jan 2025</p>
+    </div>
+
+    <!-- Certificate Item 2 -->
+    <div class="cert-item" onclick="openModal('hubspot-cert.png', 'Content Marketing', 'HubSpot | Mar 2025')">
+      <img src="hubspot-cert.png" alt="HubSpot Content Marketing Certificate">
+      <h3>Content Marketing</h3>
+      <p>HubSpot | Mar 2025</p>
+    </div>
+
+    <!-- Add more certificates by copying a div above -->
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="certModal">
+  <div>
+    <span onclick="closeModal()">&times;</span>
+    <img id="modalImg" src="" alt="Certificate">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <a id="modalLink" href="#" target="_blank">View Certificate</a>
+  </div>
+</div>
+
+<style>
+/* Certificate Cards */
+.cert-item {
+  background-color: #FFE4E1;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cert-item img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+.cert-item h3 {
+  color: #FF69B4;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.cert-item p {
+  color: #FF1493;
+}
+
+/* Hover Animation */
+.cert-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+/* Modal Styling */
+#certModal {
+  display: none;
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+#certModal > div {
+  background-color: #FFF0F5;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+#certModal span {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #FF1493;
+}
+#certModal img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+#certModal h3 {
+  color: #FF69B4;
+  margin-bottom: 10px;
+}
+#certModal p {
+  color: #FF1493;
+  margin-bottom: 20px;
+}
+#certModal a {
+  background-color: #FF69B4;
+  color:white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+</style>
+
+<script>
+function openModal(imgSrc, title, desc) {
+  document.getElementById('certModal').style.display = 'flex';
+  document.getElementById('modalImg').src = imgSrc;
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDesc').innerText = desc;
+  document.getElementById('modalLink').href = imgSrc; // replace with PDF if needed
+}
+
+function closeModal() {
+  document.getElementById('certModal').style.display = 'none';
+}
+</script>
