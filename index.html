@@ -1,246 +1,311 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Snooky Delos Reyes | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(135deg, #111, #444);
-            color: #fff;
-            padding: 50px 20px;
-            text-align: center;
-            animation: fadeIn 1.5s ease;
-        }
-        nav {
-            background: #222;
-            padding: 10px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        .hero {
-            padding: 70px 20px;
-            text-align: center;
-            background: #fff;
-            animation: slideUp 1.3s ease;
-        }
-        .hero img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .section {
-            padding: 40px 20px;
-            max-width: 1100px;
-            margin: auto;
-            animation: fadeIn 1.5s ease;
-        }
-        h2 {
-            margin-bottom: 15px;
-            color: #222;
-        }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .project-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            transition: 0.3s;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #111;
-            color: white;
-            margin-top: 40px;
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        @keyframes fadeIn {
-            from {opacity: 0;} to {opacity: 1;}
-        }
-        @keyframes slideUp {
-            from {transform: translateY(30px); opacity: 0;} to {transform: translateY(0); opacity: 1;}
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
-            }
-            .hero h1 {
-                font-size: 24px;
-            }
-        }
-    </style>
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff5f8;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #f7c6d9, #e8b7d4);
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: #4a2c3a;
+}
+
+header p {
+    font-size: 16px;
+    color: #6b3e52;
+    margin-top: 8px;
+}
+
+/* NAVIGATION */
+nav {
+    background: #f2a7c6;
+    padding: 12px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #4a2c3a;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* HERO */
+.hero {
+    background: #fffafc;
+    text-align: center;
+    padding: 70px 20px;
+    animation: slideUp 1.3s ease;
+}
+
+.hero img {
+    width: 160px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(232, 183, 212, 0.6);
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    color: #b76e8e;
+    margin-bottom: 10px;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    color: #b76e8e;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(232, 183, 212, 0.4);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(232, 183, 212, 0.6);
+}
+
+/* PRICING MENU */
+#pricing-menu {
+    background: #fff0f6;
+    border-radius: 18px;
+    padding: 50px 25px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.pricing-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(232, 183, 212, 0.35);
+    transition: 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(232, 183, 212, 0.55);
+}
+
+.pricing-card h3 {
+    color: #b76e8e;
+    margin-bottom: 10px;
+}
+
+.pricing-card ul {
+    list-style: none;
+}
+
+.pricing-card li {
+    margin-bottom: 6px;
+}
+
+/* CONTACT */
+#contact p {
+    margin-bottom: 6px;
+}
+
+/* FOOTER */
+footer {
+    background: #e8b7d4;
+    text-align: center;
+    padding: 22px;
+    color: #4a2c3a;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Snooky Delos Reyes</h1>
-        <p>Your Friendly Digital Assistant</p>
-    </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="#pricing-menu">Pricing-Menu</a>
-    </nav>
+<header>
+    <h1>Snooky Delos Reyes</h1>
+    <p>Your Friendly Digital Assistant</p>
+</header>
 
-    <section class="hero">
-        <img src="565700590_122230683908106997_546319411512787978_n.jpg" alt="Profile Image" />
-        <h1>Welcome to My Portfolio</h1>
-        <p>I create digital works, templates, websites, and more.</p>
-    </section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#pricing-menu">Pricing</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I am a reliable and results-oriented professional with nearly six years of experience as an Administrative Assistant in a gasoline station setting, where I gained strong expertise in operations, documentation, and customer service. While my digital skills come from a different path than my past roles, I have independently built solid capabilities in resume creation, content development, and website design—driven by passion, self-discipline, and continuous learning.
+<section class="hero">
+    <img src="565700590_122230683908106997_546319411512787978_n.jpg" alt="Profile Image">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I create digital works, templates, websites, and reliable admin support.</p>
+</section>
 
-I also provide essential administrative support services, including SSS Registration, Pag-IBIG, NBI and Police Clearance assistance, and DFA appointment coordination.
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am a reliable and results-oriented professional with nearly six years of experience as an Administrative Assistant in a gasoline station setting. Through passion and self-learning, I developed strong digital skills in resume creation, content development, and website design—combining efficiency, creativity, and dependable support.</p>
+</section>
 
-By combining my administrative background with modern digital proficiency, I offer clients a unique blend of efficiency, creativity, and dependable support. I am committed to delivering high-quality results and helping individuals and businesses present themselves professionally and confidently. </p>
-    </section>
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+        <li>Resume & Cover Letter Writing</li>
+        <li>Website Building (Business, Personal, E-commerce)</li>
+        <li>Content Creation & Editing</li>
+        <li>Excel & Digital Templates</li>
+        <li>Government Document Assistance</li>
+    </ul>
+</section>
 
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Resume & Cover Letter Writing</li>
-            <li>Website Building (E-commerce, Business, Personal)</li>
-            <li>Content Creation & Editing</li>
-            <li>Excel & Digital Templates</li>
-            <li>Government Document Assistance</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Resume Template</h3>
-                <p>Professional resume design tailored to help job seekers stand out, with a clean, modern, and impactful layout that impresses employers.</p>
-            </div>
-            <div class="project-card">
-                <h3>Business Website</h3>
-                <p>Get a fully customized, modern, and responsive website designed to elevate your small business online — professional quality at an affordable rate.</p>
-            </div>
-            <div class="project-card">
-                <h3>Content Creation</h3>
-                <p>Engaging social media graphics and professional branding materials crafted to boost your online presence and captivate your audience.</p>
-            </div>
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Resume Templates</h3>
+            <p>Clean and professional resumes designed to help job seekers stand out.</p>
         </div>
-    </section>
+        <div class="project-card">
+            <h3>Business Websites</h3>
+            <p>Modern, responsive websites that elevate your brand online.</p>
+        </div>
+        <div class="project-card">
+            <h3>Content Creation</h3>
+            <p>Eye-catching social media graphics and branding materials.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Pricing Menu Section (HTML Snippet) --><section id="pricing-menu" style="background:#fff7fb; padding:30px; border-radius:14px; font-family:Inter, sans-serif; max-width:900px; margin:0 auto;">
-  <h2 style="text-align:center; color:#2b2b2b; margin-bottom:20px;">📌 Pricing Menu</h2>  <div class="pricing-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;"><!-- Resume & Documents -->
-<div style="background:white; padding:18px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-  <h3>📝 Resume & Document Services</h3>
-  <ul style="list-style:none; padding:0; margin:10px 0 0;">
-    <li>Resume Writing — <strong>₱99</strong></li>
-    <li>Resume Editing — <strong>₱79</strong></li>
-    <li>Cover Letter — <strong>₱59</strong></li>
-    <li>Bundle (Resume + Cover Letter) — <strong>₱149</strong></li>
-  </ul>
-</div>
+<section id="pricing-menu" class="section">
+    <h2 style="text-align:center;">Pricing Menu</h2>
 
-<!-- Government Assistance -->
-<div style="background:white; padding:18px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-  <h3>📄 Government Assistance</h3>
-  <ul style="list-style:none; padding:0; margin:10px 0 0;">
-    <li>SSS Registration — <strong>₱80</strong></li>
-    <li>Pag-IBIG Registration — <strong>₱80</strong></li>
-    <li>NBI Appointment — <strong>₱70</strong></li>
-    <li>Police Clearance — <strong>₱70</strong></li>
-    <li>DFA Appointment — <strong>₱90</strong></li>
-    <li>Others — <strong>₱70</strong></li>
-  </ul>
-</div>
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3>📝 Resume & Documents</h3>
+            <ul>
+                <li>Resume Writing — ₱99</li>
+                <li>Resume Editing — ₱79</li>
+                <li>Cover Letter — ₱59</li>
+                <li>Bundle — ₱149</li>
+            </ul>
+        </div>
 
-<!-- Digital Services -->
-<div style="background:white; padding:18px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-  <h3>💻 Digital & Admin Services</h3>
-  <ul style="list-style:none; padding:0; margin:10px 0 0;">
-    <li>Data Entry — <strong>₱100/hr</strong></li>
-    <li>PDF Editing — <strong>₱49</strong></li>
-    <li>Excel Template — <strong>₱99</strong></li>
-    <li>VA Tasks — <strong>₱120/hr</strong></li>
-  </ul>
-</div>
+        <div class="pricing-card">
+            <h3>📄 Government Assistance</h3>
+            <ul>
+                <li>SSS — ₱80</li>
+                <li>Pag-IBIG — ₱80</li>
+                <li>NBI — ₱70</li>
+                <li>DFA — ₱90</li>
+            </ul>
+        </div>
 
-<!-- Website Creation -->
-<div style="background:white; padding:18px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-  <h3>🌐 Website Creation</h3>
-  <ul style="list-style:none; padding:0; margin:10px 0 0;">
-    <li>Portfolio Website — <strong>₱399</strong></li>
-    <li>Business Website — <strong>₱599</strong></li>
-    <li>E-Commerce — <strong>₱799</strong></li>
-    <li>Landing Page — <strong>₱349</strong></li>
-  </ul>
-</div>
+        <div class="pricing-card">
+            <h3>💻 Digital Services</h3>
+            <ul>
+                <li>Data Entry — ₱100/hr</li>
+                <li>PDF Editing — ₱49</li>
+                <li>Excel Template — ₱99</li>
+            </ul>
+        </div>
 
-<!-- Branding & Content -->
-<div style="background:white; padding:18px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-  <h3>🎨 Branding & Content</h3>
-  <ul style="list-style:none; padding:0; margin:10px 0 0;">
-    <li>3 Social Graphics — <strong>₱80</strong></li>
-    <li>Simple Logo — <strong>₱99</strong></li>
-    <li>Product Description — <strong>₱20/item</strong></li>
-    <li>5 FB/IG Posts — <strong>₱150</strong></li>
-  </ul>
-</div>
+        <div class="pricing-card">
+            <h3>🌐 Website Creation</h3>
+            <ul>
+                <li>Portfolio — ₱399</li>
+                <li>Business — ₱599</li>
+                <li>E-Commerce — ₱799</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-<!-- Other Services -->
-<div style="background:white; padding:18px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-  <h3>📂 Other Services</h3>
-  <ul style="list-style:none; padding:0; margin:10px 0 0;">
-    <li>Fillable PDF Forms — <strong>₱79</strong></li>
-    <li>PowerPoint 10 slides — <strong>₱150</strong></li>
-    <li>Background Removal — <strong>₱10/photo</strong></li>
-  </ul>
-</div>
-      </div>
-    </section>
-    
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <strong>sddrdigitals@gmail.com</strong></p>
+    <p>Phone: <strong>+63-908-313-1655</strong></p>
+</section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email me at: <strong>sddrdigitals@gmail.com</strong></p>
-        <p>Contact me at: <strong>+63-908-313-1655</strong></p>
-    </section>
+<footer>
+    © 2025 Snooky Delos Reyes — All Rights Reserved
+</footer>
 
-    <footer>
-        © 2025 Snooky Delos Reyes — All Rights Reserved
-    </footer>
 </body>
-    </html>
+</html>
