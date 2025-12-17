@@ -62,7 +62,7 @@ h2 {
     font-family: "Playfair Display", serif;
     color: #FF6F61;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 /* PRICING GRID */
@@ -72,13 +72,15 @@ h2 {
     gap: 25px;
 }
 
-/* PRICING CARDS */
+/* PACKAGE CARDS */
 .pricing-card {
     background: #FFFFFF;
-    padding: 22px;
+    padding: 25px;
     border-radius: 16px;
     box-shadow: 0 8px 22px rgba(255,111,97,0.3);
+    text-align: center;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .pricing-card:hover {
@@ -88,28 +90,37 @@ h2 {
 
 .pricing-card h3 {
     color: #FF6F61;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.pricing-card p {
+    margin-bottom: 15px;
 }
 
 .pricing-card ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 20px;
 }
 
 .pricing-card li {
     margin-bottom: 6px;
 }
 
-/* CTA BUTTON */
-.cta {
-    text-align: center;
-    margin-top: 40px;
+/* PRICE TAG */
+.price {
+    font-size: 28px;
+    font-weight: 600;
+    color: #4A90E2;
+    margin-bottom: 20px;
 }
 
+/* CTA BUTTON */
 .cta a {
     background: #FF6F61;
     color: #FFFFFF;
-    padding: 14px 30px;
+    padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 500;
@@ -134,8 +145,8 @@ footer {
 <body>
 
 <header>
-    <h1>Pricing Menu</h1>
-    <p>Affordable • Professional • Beginner-Friendly</p>
+    <h1>Pricing Packages</h1>
+    <p>Beginner-Friendly • Affordable • Professional</p>
 </header>
 
 <nav>
@@ -145,31 +156,53 @@ footer {
 </nav>
 
 <section class="section" id="pricing">
-    <h2>My Services & Beginner Rates (USD)</h2>
+    <h2>Choose Your Package</h2>
 
     <div class="pricing-grid">
+        <!-- Basic Package -->
         <div class="pricing-card">
-            <h3>📝 Resume & Documents</h3>
+            <h3>Basic</h3>
+            <div class="price">$10</div>
+            <p>Perfect for job seekers starting out</p>
             <ul>
-                <li>Resume Writing — $5</li>
-                <li>Resume Editing — $3</li>
-                <li>Cover Letter — $2</li>
-                <li>Bundle — $8</li>
+                <li>Resume Writing</li>
+                <li>Cover Letter</li>
             </ul>
+            <div class="cta">
+                <a href="contact.html">Hire Now</a>
+            </div>
         </div>
 
+        <!-- Standard Package -->
         <div class="pricing-card">
-            <h3>🌐 Website Creation</h3>
+            <h3>Standard</h3>
+            <div class="price">$25</div>
+            <p>Ideal for those who want a polished profile</p>
             <ul>
-                <li>Portfolio — $15</li>
-                <li>Business — $25</li>
-                <li>E-Commerce — $35</li>
+                <li>Resume Writing + Editing</li>
+                <li>Cover Letter</li>
+                <li>Portfolio Website</li>
             </ul>
+            <div class="cta">
+                <a href="contact.html">Hire Now</a>
+            </div>
         </div>
-    </div>
 
-    <div class="cta">
-        <a href="contact.html">Hire Me Now</a>
+        <!-- Premium Package -->
+        <div class="pricing-card">
+            <h3>Premium</h3>
+            <div class="price">$50</div>
+            <p>Complete package for serious online presence</p>
+            <ul>
+                <li>Resume Writing + Editing</li>
+                <li>Cover Letter</li>
+                <li>Business or E-Commerce Website</li>
+                <li>Optional: Social Media Content</li>
+            </ul>
+            <div class="cta">
+                <a href="contact.html">Hire Now</a>
+            </div>
+        </div>
     </div>
 </section>
 
