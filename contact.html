@@ -3,49 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Snooky Delos Reyes</title>
+<title>Pricing | Snooky Delos Reyes</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-<!-- Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
 body {
     font-family: "Poppins", sans-serif;
-    background: #fff5f8;
-    color: #4a4a4a;
+    background: #F8F9FA;
+    color: #333333;
     margin: 0;
-    line-height: 1.6;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #f7c6d9, #e8b7d4);
+    background: linear-gradient(135deg, #FF6F61, #FF8A80);
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
+    color: #FFFFFF;
 }
 
 header h1 {
     font-family: "Playfair Display", serif;
-    font-size: 36px;
-    color: #4a2c3a;
+    margin-bottom: 8px;
 }
 
 header p {
-    color: #6b3e52;
-    margin-top: 10px;
+    font-size: 16px;
 }
 
 /* NAVIGATION */
 nav {
-    background: #f2a7c6;
+    background: #4A90E2;
     padding: 12px;
     text-align: center;
 }
 
 nav a {
-    color: #4a2c3a;
+    color: #FFFFFF;
     margin: 0 15px;
     text-decoration: none;
     font-weight: 500;
@@ -53,132 +48,96 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: #FF6F61;
 }
 
-/* CONTACT SECTION */
+/* SECTION */
 .section {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
     padding: 50px 20px;
 }
 
 h2 {
     font-family: "Playfair Display", serif;
-    color: #b76e8e;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.contact-info {
+    color: #FF6F61;
     text-align: center;
     margin-bottom: 40px;
 }
 
-.contact-info p {
-    font-size: 16px;
-    margin: 12px 0;
-}
-<div class="contact-social" style="text-align:center; margin-top:20px;">
-    <a href="https://www.facebook.com/sddrservices" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.linkedin.com/in/snookydelosreyes" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-</div>
-    
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 25px;
+/* PRICING GRID */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
-.cta-btn {
-    padding: 12px 26px;
+/* PACKAGE CARDS */
+.pricing-card {
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(255,111,97,0.3);
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(255,111,97,0.5);
+}
+
+.pricing-card h3 {
+    color: #FF6F61;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.pricing-card p {
+    margin-bottom: 15px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-card li {
+    margin-bottom: 6px;
+}
+
+/* PRICE TAG */
+.price {
+    font-size: 28px;
+    font-weight: 600;
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+/* CTA BUTTON */
+.cta a {
+    background: #FF6F61;
+    color: #FFFFFF;
+    padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s;
-    font-size: 14px;
 }
 
-.cta-primary {
-    background: #b76e8e;
-    color: #fff;
-}
-
-.cta-primary:hover {
-    background: #9e5c78;
-}
-
-.cta-secondary {
-    background: transparent;
-    color: #b76e8e;
-    border: 2px solid #b76e8e;
-}
-
-.cta-secondary:hover {
-    background: #b76e8e;
-    color: #fff;
+.cta a:hover {
+    background: #E55B50;
 }
 
 /* FOOTER */
 footer {
-    background: #e8b7d4;
+    background: #4A90E2;
     text-align: center;
-    padding: 22px;
-    color: #4a2c3a;
+    padding: 20px;
+    color: #FFFFFF;
     margin-top: 40px;
-}
-.footer-content {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.social-icon {
-    display: inline-block;
-    margin: 0 10px;
-    color: #b76e8e;
-    font-size: 20px;
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    color: #9e5c78;
-}
-/* FORM STYLING */
-.contact-form {
-    background: #fffafc;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 8px 22px rgba(232, 183, 212, 0.4);
-    max-width: 500px;
-    margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    border: 1px solid #e8b7d4;
-    font-size: 14px;
-}
-
-.contact-form button {
-    background: #b76e8e;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.contact-form button:hover {
-    background: #9e5c78;
 }
 </style>
 </head>
@@ -186,45 +145,70 @@ footer {
 <body>
 
 <header>
-    <h1>Contact Me</h1>
-    <p>Let's Connect and Collaborate</p>
+    <h1>Pricing Packages</h1>
+    <p>Beginner-Friendly • Affordable • Professional</p>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="pricing.html">Pricing</a>
+    <a href="#pricing">Pricing</a>
     <a href="contact.html">Contact</a>
 </nav>
 
-<section class="section">
-    <h2>Get in Touch</h2>
+<section class="section" id="pricing">
+    <h2>Choose Your Package</h2>
 
-    <div class="contact-info">
-        <p>Email: <a href="mailto:sddrdigitals@gmail.com">sddrdigitals@gmail.com</a></p>
-        <p>Phone: <a href="tel:+639083131655">+63-908-313-1655</a></p>
-        <p>Available: Monday - Sunday | 6AM - 10PM</p>
-    </div>
+    <div class="pricing-grid">
+        <!-- Basic Package -->
+        <div class="pricing-card">
+            <h3>Basic</h3>
+            <div class="price">$10</div>
+            <p>Perfect for job seekers starting out</p>
+            <ul>
+                <li>Resume Writing</li>
+                <li>Cover Letter</li>
+            </ul>
+            <div class="cta">
+                <a href="contact.html">Hire Now</a>
+            </div>
+        </div>
 
-    <div class="cta-buttons">
-        <a href="mailto:sddrdigitals@gmail.com" class="cta-btn cta-primary">Email Me</a>
-        <a href="tel:+639083131655" class="cta-btn cta-secondary">Call Me</a>
-    </div>
+        <!-- Standard Package -->
+        <div class="pricing-card">
+            <h3>Standard</h3>
+            <div class="price">$25</div>
+            <p>Ideal for those who want a polished profile</p>
+            <ul>
+                <li>Resume Writing + Editing</li>
+                <li>Cover Letter</li>
+                <li>Portfolio Website</li>
+            </ul>
+            <div class="cta">
+                <a href="contact.html">Hire Now</a>
+            </div>
+        </div>
 
-    <div class="contact-form" style="margin-top:40px;">
-        <form action="mailto:sddrdigitals@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <!-- Premium Package -->
+        <div class="pricing-card">
+            <h3>Premium</h3>
+            <div class="price">$50</div>
+            <p>Complete package for serious online presence</p>
+            <ul>
+                <li>Resume Writing + Editing</li>
+                <li>Cover Letter</li>
+                <li>Business or E-Commerce Website</li>
+                <li>Optional: Social Media Content</li>
+            </ul>
+            <div class="cta">
+                <a href="contact.html">Hire Now</a>
+            </div>
+        </div>
     </div>
 </section>
 
 <footer>
-    <div class="footer-content" style="margin-bottom:10px;">
-        <a href="https://www.facebook.com/sddrservices" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/in/snookydelosreyes" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-    </div>
     © 2025 Snooky Delos Reyes — All Rights Reserved
-    
-  
+</footer>
+
+</body>
+</html>
