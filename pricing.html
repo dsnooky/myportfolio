@@ -53,6 +53,7 @@ header p {
     font-weight: 500;
     box-shadow: 0 6px 15px rgba(255,111,97,0.4);
     animation: pulse 1.5s infinite alternate, slide 2s infinite alternate;
+    text-decoration: none; /* Remove underline */
 }
 
 /* Close Button */
@@ -64,6 +65,7 @@ header p {
     cursor: pointer;
     color: #fff;
     transition: color 0.3s;
+    z-index: 2;
 }
 
 .close-btn:hover {
@@ -209,13 +211,13 @@ footer {
     <p>Beginner-Friendly • Affordable • Professional</p>
 </header>
 
-<!-- Sticky Promo Banner -->
+<!-- Sticky Clickable Promo Banner -->
 <section id="promo">
-  <div class="promo-banner" id="promoBanner">
+  <a href="contact.html" class="promo-banner" id="promoBanner">
     🎉 Special Promo: <strong>20% OFF</strong> on all services! 🎉<br>
     <span>Valid from Dec 17, 2025 – Jan 1, 2026. Book now and save!</span>
-    <span class="close-btn" onclick="closePromo()">&times;</span>
-  </div>
+    <span class="close-btn" onclick="closePromo(event)">&times;</span>
+  </a>
 </section>
 
 <nav>
@@ -280,7 +282,8 @@ footer {
 </footer>
 
 <script>
-function closePromo() {
+function closePromo(event) {
+    event.stopPropagation(); // Prevent redirect when clicking close
     document.getElementById('promoBanner').style.display = 'none';
 }
 </script>
