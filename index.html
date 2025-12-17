@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,14 +19,14 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #fff5f8;
-    color: #4a4a4a;
+    background: #F8F9FA;
+    color: #333333;
     line-height: 1.6;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #f7c6d9, #e8b7d4);
+    background: linear-gradient(135deg, #FF6F61, #FF8A80);
     padding: 60px 20px;
     text-align: center;
     animation: fadeIn 1.5s ease;
@@ -36,18 +35,18 @@ header {
 header h1 {
     font-family: "Playfair Display", serif;
     font-size: 40px;
-    color: #4a2c3a;
+    color: #2C2C2C;
 }
 
 header p {
     font-size: 16px;
-    color: #6b3e52;
+    color: #555555;
     margin-top: 8px;
 }
 
 /* NAVIGATION */
 nav {
-    background: #f2a7c6;
+    background: #4A90E2;
     padding: 12px 0;
     text-align: center;
     position: sticky;
@@ -56,7 +55,7 @@ nav {
 }
 
 nav a {
-    color: #4a2c3a;
+    color: #FFFFFF;
     margin: 0 15px;
     text-decoration: none;
     font-weight: 500;
@@ -64,12 +63,12 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: #FF6F61;
 }
 
 /* HERO */
 .hero {
-    background: #fffafc;
+    background: #FFFFFF;
     text-align: center;
     padding: 70px 20px;
     animation: slideUp 1.3s ease;
@@ -79,12 +78,12 @@ nav a:hover {
     width: 160px;
     border-radius: 50%;
     margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(232, 183, 212, 0.6);
+    box-shadow: 0 8px 20px rgba(255,111,97,0.3);
 }
 
 .hero h1 {
     font-family: "Playfair Display", serif;
-    color: #b76e8e;
+    color: #FF6F61;
     margin-bottom: 10px;
 }
 
@@ -98,7 +97,7 @@ nav a:hover {
 
 h2 {
     font-family: "Playfair Display", serif;
-    color: #b76e8e;
+    color: #FF6F61;
     margin-bottom: 15px;
 }
 
@@ -114,21 +113,21 @@ ul li {
 }
 
 .project-card {
-    background: #ffffff;
+    background: #FFFFFF;
     padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 8px 22px rgba(232, 183, 212, 0.4);
+    box-shadow: 0 8px 20px rgba(255,111,97,0.3);
     transition: 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 14px 30px rgba(232, 183, 212, 0.6);
+    box-shadow: 0 14px 30px rgba(255,111,97,0.5);
 }
 
 /* PRICING MENU */
 #pricing-menu {
-    background: #fff0f6;
+    background: #F8F9FA;
     border-radius: 18px;
     padding: 50px 25px;
 }
@@ -140,20 +139,20 @@ ul li {
 }
 
 .pricing-card {
-    background: #ffffff;
+    background: #FFFFFF;
     padding: 22px;
     border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(232, 183, 212, 0.35);
+    box-shadow: 0 6px 18px rgba(255,111,97,0.25);
     transition: 0.3s;
 }
 
 .pricing-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(232, 183, 212, 0.55);
+    box-shadow: 0 12px 28px rgba(255,111,97,0.5);
 }
 
 .pricing-card h3 {
-    color: #b76e8e;
+    color: #FF6F61;
     margin-bottom: 10px;
 }
 
@@ -164,6 +163,7 @@ ul li {
 .pricing-card li {
     margin-bottom: 6px;
 }
+
 .cta-buttons {
     margin-top: 25px;
     display: flex;
@@ -182,25 +182,25 @@ ul li {
 }
 
 .cta-primary {
-    background: #b76e8e;
+    background: #FF6F61;
     color: #fff;
 }
 
 .cta-primary:hover {
-    background: #9e5c78;
+    background: #E55B50;
 }
 
 .cta-secondary {
     background: transparent;
-    color: #b76e8e;
-    border: 2px solid #b76e8e;
+    color: #FF6F61;
+    border: 2px solid #FF6F61;
 }
 
 .cta-secondary:hover {
-    background: #b76e8e;
+    background: #FF6F61;
     color: #fff;
 }
-    
+
 /* CONTACT */
 #contact p {
     margin-bottom: 6px;
@@ -208,10 +208,10 @@ ul li {
 
 /* FOOTER */
 footer {
-    background: #e8b7d4;
+    background: #4A90E2;
     text-align: center;
     padding: 22px;
-    color: #4a2c3a;
+    color: #FFFFFF;
     margin-top: 40px;
     font-size: 14px;
 }
@@ -237,7 +237,7 @@ footer {
 .floating-social {
     position: fixed;
     top: 50%;
-    left: 10px; /* distance from left edge */
+    left: 10px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -252,19 +252,16 @@ footer {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: #f7c6d9; /* pastel pink background */
-    color: #4a2c3a;       /* icon color */
+    background: #FF6F61;
+    color: #FFFFFF;
     font-size: 20px;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .floating-social .social-icon:hover {
-    background: #b76e8e; /* darker pastel on hover */
-    color: #fff;
+    background: #E55B50;
 }
-    
-    
 </style>
 </head>
 
@@ -282,7 +279,6 @@ footer {
     <a href="pricing.html">Pricing</a>
     <a href="contact.html">Contact</a>
     <a href="mycertifications.html">Certifications</a>
-    
 </nav>
 
 <section class="hero">
@@ -327,20 +323,18 @@ footer {
             <h3>Content Creation</h3>
             <p>Eye-catching social media graphics and branding materials.</p>
         </div>
-    
     </div>
 </section>
 
 <footer>
     © 2025 Snooky Delos Reyes — All Rights Reserved
 </footer>
+
 <!-- Floating Social Bar -->
 <div class="floating-social">
     <a href="https://www.facebook.com/sddrservices" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
     <a href="https://www.linkedin.com/in/snookydelosreyes" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
 </div>
-</body>
-</html>
 
 </body>
 </html>
