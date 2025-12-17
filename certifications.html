@@ -1,45 +1,46 @@
 <!-- Certifications Section with Hover Animation and Modal -->
-<section id="certifications" style="background-color: #FFF0F5; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+<section id="certifications" style="background-color: #F8F9FA; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
   <div style="text-align: center; margin-bottom: 40px;">
-    <h2 style="color: #FF69B4; font-size: 2.5rem;">Certifications</h2>
-    <p style="color: #FFB6C1; font-size: 1.1rem;">Showcasing my skills and achievements</p>
+    <h2 style="color: #FF6F61; font-size: 2.5rem;">Certifications</h2>
+    <p style="color: #333333; font-size: 1.1rem;">Showcasing my skills and achievements</p>
   </div>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
     
     <!-- Certificate Item 1 -->
-    <div class="cert-item" onclick="openModal('facebookads.png', 'facebook Ads', 'Home-Based Connect | June 2022')">
+    <div class="cert-item" onclick="openModal('facebookads.png', 'Facebook Ads', 'Home-Based Connect | June 2022')">
       <img src="facebookads.png" alt="Facebook Ads Certificate">
       <h3>Facebook Ads Manager</h3>
       <p>Home-Based Connect | June 2022</p>
     </div>
 
     <!-- Certificate Item 2 -->
-    <div class="cert-item" onclick="openModal('shopify.png', 'Shopify freelancing', 'Home-Based Connect | June 2022')">
-      <img src="shopify.png" alt="Shopify freelancing Certificate">
-      <h3>Shopify freelancer</h3>
+    <div class="cert-item" onclick="openModal('shopify.png', 'Shopify Freelancing', 'Home-Based Connect | June 2022')">
+      <img src="shopify.png" alt="Shopify Certificate">
+      <h3>Shopify Freelancer</h3>
       <p>Home-Based Connect | June 2022</p>
     </div>
 
+    <!-- Certificate Item 3 -->
     <div class="cert-item" onclick="openModal('smm.png', 'Social Media Management', 'Home-Based Connect | June 2022')">
-      <img src="smm.png" alt="Social Media Management Certificate">
+      <img src="smm.png" alt="SMM Certificate">
       <h3>Social Media Manager</h3>
       <p>Home-Based Connect | June 2022</p>
     </div>
 
+    <!-- Certificate Item 4 -->
     <div class="cert-item" onclick="openModal('virtualassistant.png', 'Virtual Assistant', 'Home-Based Connect | June 2022')">
-      <img src="virtualassistant.png" alt="Shopify freelancingVirtual Assistant Certificate">
+      <img src="virtualassistant.png" alt="Virtual Assistant Certificate">
       <h3>Virtual Assistant</h3>
       <p>Home-Based Connect | June 2022</p>
     </div>
 
-    <div class="cert-item" onclick="openModal('wordpress.png', 'Wordpress Freelancing', 'Home-Based Connect | June 2022')">
-      <img src="wordpress.png" alt="Wordpress Freelancing Certificate">
-      <h3>Wordpress Freelancer</h3>
+    <!-- Certificate Item 5 -->
+    <div class="cert-item" onclick="openModal('wordpress.png', 'WordPress Freelancing', 'Home-Based Connect | June 2022')">
+      <img src="wordpress.png" alt="WordPress Certificate">
+      <h3>WordPress Freelancer</h3>
       <p>Home-Based Connect | June 2022</p>
     </div>
-
-    <!-- Add more certificates by copying a div above -->
   </div>
 </section>
 
@@ -57,11 +58,11 @@
 <style>
 /* Certificate Cards */
 .cert-item {
-  background-color: #FFE4E1;
+  background-color: #FFFFFF;
   border-radius: 15px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(255,111,97,0.3);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -70,18 +71,19 @@
   margin-bottom: 15px;
 }
 .cert-item h3 {
-  color: #FF69B4;
+  color: #FF6F61;
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
 .cert-item p {
-  color: #FF1493;
+  color: #333333;
+  font-size: 0.95rem;
 }
 
 /* Hover Animation */
 .cert-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 20px rgba(255,111,97,0.4);
 }
 
 /* Modal Styling */
@@ -95,7 +97,7 @@
   z-index: 999;
 }
 #certModal > div {
-  background-color: #FFF0F5;
+  background-color: #FFFFFF;
   padding: 30px;
   border-radius: 15px;
   max-width: 500px;
@@ -109,26 +111,30 @@
   right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #FF1493;
+  color: #FF6F61;
 }
 #certModal img {
   width: 100px;
   margin-bottom: 20px;
 }
 #certModal h3 {
-  color: #FF69B4;
+  color: #FF6F61;
   margin-bottom: 10px;
 }
 #certModal p {
-  color: #FF1493;
+  color: #333333;
   margin-bottom: 20px;
 }
 #certModal a {
-  background-color: #FF69B4;
+  background-color: #FF6F61;
   color:white;
   padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
+  transition: background 0.3s;
+}
+#certModal a:hover {
+  background-color: #e65b4f;
 }
 </style>
 
@@ -138,7 +144,7 @@ function openModal(imgSrc, title, desc) {
   document.getElementById('modalImg').src = imgSrc;
   document.getElementById('modalTitle').innerText = title;
   document.getElementById('modalDesc').innerText = desc;
-  document.getElementById('modalLink').href = imgSrc; // replace with PDF if needed
+  document.getElementById('modalLink').href = imgSrc;
 }
 
 function closeModal() {
