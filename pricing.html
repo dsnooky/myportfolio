@@ -10,35 +10,48 @@
 <style>
 body {
     font-family: "Poppins", sans-serif;
-    background: #fff5f8;
-    color: #4a4a4a;
+    background: #F8F9FA;
+    color: #333333;
     margin: 0;
 }
 
+/* HEADER */
 header {
-    background: linear-gradient(135deg, #f7c6d9, #e8b7d4);
+    background: linear-gradient(135deg, #FF6F61, #FF8A80);
     text-align: center;
     padding: 50px 20px;
+    color: #FFFFFF;
 }
 
 header h1 {
     font-family: "Playfair Display", serif;
-    color: #4a2c3a;
+    margin-bottom: 8px;
 }
 
+header p {
+    font-size: 16px;
+}
+
+/* NAVIGATION */
 nav {
-    background: #f2a7c6;
+    background: #4A90E2;
     padding: 12px;
     text-align: center;
 }
 
 nav a {
-    color: #4a2c3a;
+    color: #FFFFFF;
     margin: 0 15px;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
 }
 
+nav a:hover {
+    color: #FF6F61;
+}
+
+/* SECTION */
 .section {
     max-width: 1100px;
     margin: auto;
@@ -47,26 +60,34 @@ nav a {
 
 h2 {
     font-family: "Playfair Display", serif;
-    color: #b76e8e;
+    color: #FF6F61;
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* PRICING GRID */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
+/* PRICING CARDS */
 .pricing-card {
-    background: #fff;
+    background: #FFFFFF;
     padding: 22px;
     border-radius: 16px;
-    box-shadow: 0 8px 22px rgba(232, 183, 212, 0.4);
+    box-shadow: 0 8px 22px rgba(255,111,97,0.3);
+    transition: 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(255,111,97,0.5);
 }
 
 .pricing-card h3 {
-    color: #b76e8e;
+    color: #FF6F61;
     margin-bottom: 10px;
 }
 
@@ -79,25 +100,32 @@ h2 {
     margin-bottom: 6px;
 }
 
+/* CTA BUTTON */
 .cta {
     text-align: center;
     margin-top: 40px;
 }
 
 .cta a {
-    background: #b76e8e;
-    color: #fff;
+    background: #FF6F61;
+    color: #FFFFFF;
     padding: 14px 30px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
 }
 
+.cta a:hover {
+    background: #E55B50;
+}
+
+/* FOOTER */
 footer {
-    background: #e8b7d4;
+    background: #4A90E2;
     text-align: center;
     padding: 20px;
-    color: #4a2c3a;
+    color: #FFFFFF;
     margin-top: 40px;
 }
 </style>
@@ -119,15 +147,16 @@ footer {
 <section class="section" id="pricing">
     <h2>My Services & Rates</h2>
 
-    <div class="pricing-card">
-    <h3>📝 Resume & Documents</h3>
-    <ul>
-        <li>Resume Writing — ₱99</li>
-        <li>Resume Editing — ₱79</li>
-        <li>Cover Letter — ₱59</li>
-        <li>Bundle — ₱149</li>
-    </ul>
-</div>
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3>📝 Resume & Documents</h3>
+            <ul>
+                <li>Resume Writing — ₱99</li>
+                <li>Resume Editing — ₱79</li>
+                <li>Cover Letter — ₱59</li>
+                <li>Bundle — ₱149</li>
+            </ul>
+        </div>
 
         <div class="pricing-card">
             <h3>📄 Government Assistance</h3>
