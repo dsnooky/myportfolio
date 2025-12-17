@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,47 +6,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certifications | Snooky Delos Reyes</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- Font Awesome for social icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
+/* =====================
+   COLOR VARIABLES
+===================== */
+:root {
+    --coral-main: #FF6F61;
+    --coral-light: #FF8A80;
+    --coral-hover: #E55B50;
+    --blue-main: #4A90E2;
+    --bg-light: #F8F9FA;
+    --text-dark: #333333;
+    --white: #FFFFFF;
+}
+
+/* GLOBAL */
 body {
     font-family: "Poppins", sans-serif;
-    background: #fff5f8;
-    color: #4a4a4a;
+    background: var(--bg-light);
+    color: var(--text-dark);
     margin: 0;
 }
 
-/* Header */
+/* HEADER */
 header {
-    background: linear-gradient(135deg, #f7c6d9, #e8b7d4);
+    background: linear-gradient(135deg, var(--coral-main), var(--coral-light));
     text-align: center;
     padding: 60px 20px;
+    color: var(--white);
 }
 
 header h1 {
     font-family: "Playfair Display", serif;
     font-size: 36px;
-    color: #4a2c3a;
 }
 
 header p {
-    color: #6b3e52;
-    margin-top: 10px;
+    font-size: 18px;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
-    background: #f2a7c6;
+    background: var(--blue-main);
     padding: 12px;
     text-align: center;
 }
 
 nav a {
-    color: #4a2c3a;
+    color: var(--white);
     margin: 0 15px;
     text-decoration: none;
     font-weight: 500;
@@ -53,55 +64,62 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: var(--coral-main);
 }
 
-/* Certifications Section */
+/* SECTION */
 .section {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 50px 20px;
 }
 
 h2 {
     font-family: "Playfair Display", serif;
-    color: #b76e8e;
+    color: var(--coral-main);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
+/* CERT GRID */
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .cert-card {
-    background: #fffafc;
-    padding: 20px;
+    background: var(--white);
+    padding: 22px;
     border-radius: 16px;
-    box-shadow: 0 8px 22px rgba(232, 183, 212, 0.4);
+    box-shadow: 0 8px 22px rgba(255,111,97,0.3);
     transition: 0.3s;
+    text-align: center;
 }
 
 .cert-card img {
     width: 100%;
     border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.cert-card h3 {
+    color: var(--coral-main);
     margin-bottom: 10px;
 }
 
 .cert-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(232, 183, 212, 0.55);
+    box-shadow: 0 14px 30px rgba(255,111,97,0.5);
 }
 
-/* CTA Buttons */
+/* CTA BUTTONS */
 .cta-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 .cta-btn {
@@ -114,63 +132,61 @@ h2 {
 }
 
 .cta-primary {
-    background: #b76e8e;
-    color: #fff;
+    background: var(--coral-main);
+    color: var(--white);
 }
 
 .cta-primary:hover {
-    background: #9e5c78;
+    background: var(--coral-hover);
 }
 
 .cta-secondary {
-    background: transparent;
-    color: #b76e8e;
-    border: 2px solid #b76e8e;
+    border: 2px solid var(--coral-main);
+    color: var(--coral-main);
 }
 
 .cta-secondary:hover {
-    background: #b76e8e;
-    color: #fff;
+    background: var(--coral-main);
+    color: var(--white);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-    background: #e8b7d4;
+    background: var(--blue-main);
     text-align: center;
     padding: 22px;
-    color: #4a2c3a;
+    color: var(--white);
     margin-top: 40px;
 }
 
-/* Floating Social Bar */
+/* FLOATING SOCIAL */
 .floating-social {
     position: fixed;
     top: 50%;
-    left: 10px;
+    left: 12px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 15px;
-    z-index: 10000;
+    z-index: 999;
 }
 
-.floating-social .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.social-icon {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: #f7c6d9;
-    color: #4a2c3a;
-    font-size: 20px;
-    text-decoration: none;
+    background: var(--coral-main);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
     transition: 0.3s;
+    text-decoration: none;
 }
 
-.floating-social .social-icon:hover {
-    background: #b76e8e;
-    color: #fff;
+.social-icon:hover {
+    background: var(--blue-main);
 }
 </style>
 </head>
@@ -196,29 +212,32 @@ footer {
         <div class="cert-card">
             <img src="facebookads.png" alt="Facebook Ads Certificate">
             <h3>Facebook Ads Manager</h3>
-            <p>Completed professional training on Facebook Ads Marketing.</p>
+            <p>Professional training in Facebook Ads Marketing.</p>
         </div>
+
         <div class="cert-card">
-            <img src="shopify.png" alt="Shopify freelancing Certificate">
+            <img src="shopify.png" alt="Shopify Certificate">
             <h3>Shopify Freelancer</h3>
-            <p>Certified in creating responsive websites for Shopify e-commerce.</p>
+            <p>Certified in building Shopify e-commerce websites.</p>
         </div>
+
         <div class="cert-card">
-            <img src="smm.png" alt="Social Media Management Certificate">
+            <img src="smm.png" alt="Social Media Certificate">
             <h3>Social Media Manager</h3>
-            <p>Training in creating engaging content and graphics for social media platforms.</p>
+            <p>Creating engaging content and graphics.</p>
         </div>
+
         <div class="cert-card">
             <img src="virtualassistant.png" alt="Virtual Assistant Certificate">
             <h3>Virtual Assistant</h3>
-            <p>Training in administrative, technical, or creative support to clients remotely.</p>
+            <p>Administrative, technical, and creative support.</p>
         </div>
+
         <div class="cert-card">
-            <img src="wordpress.png" alt="Wordpress Freelancing Certificate">
-            <h3>Wordpress Freelancer</h3>
-            <p>Training in administrative, technical, or creative support to clients remotely.</p>
+            <img src="wordpress.png" alt="WordPress Certificate">
+            <h3>WordPress Freelancer</h3>
+            <p>Professional WordPress website development.</p>
         </div>
-        <!-- Add more certifications as needed -->
     </div>
 
     <div class="cta-buttons">
@@ -227,7 +246,6 @@ footer {
     </div>
 </section>
 
-<!-- Floating Social Bar -->
 <div class="floating-social">
     <a href="https://www.facebook.com/sddrservices" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
     <a href="https://www.linkedin.com/in/snookydelosreyes" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
