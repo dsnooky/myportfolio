@@ -7,260 +7,142 @@
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<!-- Font Awesome for social icons -->
+
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:"Poppins",sans-serif;
+    background:#F8F9FA;
+    color:#333;
+    line-height:1.6;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-    background: #F8F9FA;
-    color: #333333;
-    line-height: 1.6;
+/* ===== HEADER ===== */
+header{
+    background:linear-gradient(135deg,#FF6F61,#FF8A80);
+    padding:60px 20px;
+    text-align:center;
+}
+header h1{
+    font-family:"Playfair Display",serif;
+    font-size:40px;
+}
+header p{margin-top:8px}
+
+/* ===== NAV ===== */
+nav{
+    background:#4A90E2;
+    padding:12px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+nav a{
+    color:#fff;
+    margin:0 15px;
+    text-decoration:none;
+}
+nav a:hover{color:#FF6F61}
+
+/* ===== HERO ===== */
+.hero{
+    background:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+.hero img{
+    width:160px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+.hero h1{
+    font-family:"Playfair Display",serif;
+    color:#FF6F61;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #FF6F61, #FF8A80);
-    padding: 60px 20px;
-    text-align: center;
-    animation: fadeIn 1.5s ease;
+/* ===== BUTTONS ===== */
+.cta-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+.cta-btn{
+    padding:12px 26px;
+    border-radius:30px;
+    font-weight:500;
+    text-decoration:none;
+    cursor:pointer;
+}
+.cta-primary{
+    background:#FF6F61;
+    color:#fff;
+}
+.cta-secondary{
+    border:2px solid #FF6F61;
+    color:#FF6F61;
 }
 
-header h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 40px;
-    color: #2C2C2C;
+/* ===== SECTIONS ===== */
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+h2{
+    font-family:"Playfair Display",serif;
+    color:#FF6F61;
+    margin-bottom:15px;
 }
 
-header p {
-    font-size: 16px;
-    color: #555555;
-    margin-top: 8px;
+/* ===== PROJECTS ===== */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+}
+.project-card{
+    background:#fff;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(255,111,97,.3);
 }
 
-/* NAVIGATION */
-nav {
-    background: #4A90E2;
-    padding: 12px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* ===== FOOTER ===== */
+footer{
+    background:#4A90E2;
+    text-align:center;
+    padding:22px;
+    color:#fff;
+    margin-top:40px;
 }
 
-nav a {
-    color: #FFFFFF;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+/* ===== FLOATING SOCIAL ===== */
+.floating-social{
+    position:fixed;
+    top:50%;
+    left:10px;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
-
-nav a:hover {
-    color: #FF6F61;
-}
-
-/* HERO */
-.hero {
-    background: #FFFFFF;
-    text-align: center;
-    padding: 70px 20px;
-    animation: slideUp 1.3s ease;
-}
-
-.hero img {
-    width: 160px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(255,111,97,0.3);
-}
-
-.hero h1 {
-    font-family: "Playfair Display", serif;
-    color: #FF6F61;
-    margin-bottom: 10px;
-}
-
-/* SECTIONS */
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px 20px;
-    animation: fadeIn 1.5s ease;
-}
-
-h2 {
-    font-family: "Playfair Display", serif;
-    color: #FF6F61;
-    margin-bottom: 15px;
-}
-
-ul li {
-    margin-bottom: 8px;
-}
-
-/* PROJECTS */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 22px;
-}
-
-.project-card {
-    background: #FFFFFF;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(255,111,97,0.3);
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 14px 30px rgba(255,111,97,0.5);
-}
-
-/* PRICING MENU */
-#pricing-menu {
-    background: #F8F9FA;
-    border-radius: 18px;
-    padding: 50px 25px;
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.pricing-card {
-    background: #FFFFFF;
-    padding: 22px;
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(255,111,97,0.25);
-    transition: 0.3s;
-}
-
-.pricing-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(255,111,97,0.5);
-}
-
-.pricing-card h3 {
-    color: #FF6F61;
-    margin-bottom: 10px;
-}
-
-.pricing-card ul {
-    list-style: none;
-}
-
-.pricing-card li {
-    margin-bottom: 6px;
-}
-
-.cta-buttons {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.cta-btn {
-    padding: 12px 26px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.cta-primary {
-    background: #FF6F61;
-    color: #fff;
-}
-
-.cta-primary:hover {
-    background: #E55B50;
-}
-
-.cta-secondary {
-    background: transparent;
-    color: #FF6F61;
-    border: 2px solid #FF6F61;
-}
-
-.cta-secondary:hover {
-    background: #FF6F61;
-    color: #fff;
-}
-
-/* CONTACT */
-#contact p {
-    margin-bottom: 6px;
-}
-
-/* FOOTER */
-footer {
-    background: #4A90E2;
-    text-align: center;
-    padding: 22px;
-    color: #FFFFFF;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 28px;
-    }
-}
-
-.floating-social {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 10000;
-}
-
-.floating-social .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #FF6F61;
-    color: #FFFFFF;
-    font-size: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.floating-social .social-icon:hover {
-    background: #E55B50;
+.social-icon{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#FF6F61;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
 }
 </style>
 </head>
@@ -276,35 +158,36 @@ footer {
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-    <a href="mycertifications.html">Certifications</a>
 </nav>
 
 <section class="hero">
-    <img src="565700590_122230683908106997_546319411512787978_n.jpg" alt="Profile Image">
+    <img src="565700590_122230683908106997_546319411512787978_n.jpg" alt="Profile">
     <h1>Welcome to My Portfolio</h1>
-    <p>I create digital works, templates, websites, and reliable admin support.</p>
+    <p>I create websites, templates & admin solutions.</p>
 
     <div class="cta-buttons">
-        <a href="contact.html" class="cta-btn cta-primary">Hire Me</a>
-        <a href="pricing.html" class="cta-btn cta-secondary">View Pricing</a>
+        <!-- MANYCHAT TRIGGERS -->
+        <button class="cta-btn cta-primary" data-mc-trigger="hire_me">
+            Hire Me
+        </button>
+        <button class="cta-btn cta-secondary" data-mc-trigger="pricing">
+            View Pricing
+        </button>
     </div>
 </section>
 
 <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I am a reliable and results-oriented professional with nearly six years of experience as an Administrative Assistant in a gasoline station setting. Through passion and self-learning, I developed strong digital skills in resume creation, content development, and website design—combining efficiency, creativity, and dependable support.</p>
+    <p>Reliable digital assistant with 6+ years admin experience and strong web & automation skills.</p>
 </section>
 
 <section id="skills" class="section">
     <h2>Skills</h2>
     <ul>
-        <li>Resume & Cover Letter Writing</li>
-        <li>Website Building (Business, Personal, E-commerce)</li>
-        <li>Content Creation & Editing</li>
-        <li>Excel & Digital Templates</li>
-        <li>Government Document Assistance</li>
+        <li>Website Creation</li>
+        <li>ManyChat Automation</li>
+        <li>Resume Writing</li>
+        <li>Digital Templates</li>
     </ul>
 </section>
 
@@ -312,29 +195,34 @@ footer {
     <h2>Projects</h2>
     <div class="projects">
         <div class="project-card">
-            <h3>Resume Templates</h3>
-            <p>Clean and professional resumes designed to help job seekers stand out.</p>
+            <h3>Landing Pages</h3>
+            <p>High-converting designs.</p>
         </div>
         <div class="project-card">
-            <h3>Business Websites</h3>
-            <p>Modern, responsive websites that elevate your brand online.</p>
-        </div>
-        <div class="project-card">
-            <h3>Content Creation</h3>
-            <p>Eye-catching social media graphics and branding materials.</p>
+            <h3>Messenger Bots</h3>
+            <p>Sales & support automation.</p>
         </div>
     </div>
 </section>
 
 <footer>
-    © 2025 Snooky Delos Reyes — All Rights Reserved
+    © 2025 Snooky Delos Reyes
 </footer>
 
-<!-- Floating Social Bar -->
 <div class="floating-social">
-    <a href="https://www.facebook.com/sddrservices" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.linkedin.com/in/snookydelosreyes" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.facebook.com/sddrservices" class="social-icon"><i class="fab fa-facebook-f"></i></a>
 </div>
+
+<!-- ===== MANYCHAT SCRIPT ===== -->
+<script src="https://widget.manychat.com/YOUR_MANYCHAT_PAGE_ID.js" defer></script>
+<script>
+  window.mcAsyncInit = function () {
+    ManyChat.init({
+      pageId: "YOUR_MANYCHAT_PAGE_ID",
+      popupWidget: true
+    });
+  };
+</script>
 
 </body>
 </html>
