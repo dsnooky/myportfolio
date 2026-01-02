@@ -14,15 +14,15 @@
 /* GLOBAL */
 body {
     font-family: "Poppins", sans-serif;
-    background: #F8F9FA; /* page background */
-    color: #333333;       /* main text color */
+    background: #F4F5F7; /* professional light gray */
+    color: #2C2C2C;
     margin: 0;
     line-height: 1.6;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #FF6F61, #FF8A80); /* same gradient as pricing page */
+    background: linear-gradient(135deg, #1E3A8A, #2563EB); /* professional blue gradient */
     text-align: center;
     padding: 60px 20px;
     color: #FFFFFF;
@@ -36,17 +36,18 @@ header h1 {
 header p {
     margin-top: 10px;
     font-size: 18px;
+    color: #E0E7FF;
 }
 
 /* NAVIGATION */
 nav {
-    background: #4A90E2; /* same as pricing nav/footer */
+    background: #1E40AF; /* deep professional blue */
     padding: 12px;
     text-align: center;
 }
 
 nav a {
-    color: #FFFFFF; /* white links */
+    color: #FFFFFF;
     margin: 0 15px;
     text-decoration: none;
     font-weight: 500;
@@ -54,10 +55,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #FF6F61; /* hover coral */
+    color: #60A5FA; /* lighter blue hover */
 }
 
-/* CONTACT SECTION */
+/* SECTION */
 .section {
     max-width: 900px;
     margin: auto;
@@ -66,11 +67,21 @@ nav a:hover {
 
 h2 {
     font-family: "Playfair Display", serif;
-    color: #FF6F61; /* coral heading */
+    color: #1E3A8A; /* professional dark blue heading */
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* GRADIENT DIVIDER */
+.section-divider {
+    height: 6px;
+    background: linear-gradient(90deg, #2563EB, #1E40AF);
+    border-radius: 3px;
+    margin: 40px auto;
+    width: 80%;
+}
+
+/* CONTACT INFO */
 .contact-info {
     text-align: center;
     margin-bottom: 40px;
@@ -81,6 +92,16 @@ h2 {
     margin: 12px 0;
 }
 
+.contact-info a {
+    color: #2563EB;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #1D4ED8;
+}
+
+/* CONTACT SOCIAL */
 .contact-social {
     text-align: center;
     margin-top: 20px;
@@ -89,14 +110,14 @@ h2 {
 .contact-social a {
     display: inline-block;
     margin: 0 10px;
-    color: #FF6F61; /* coral social icons */
+    color: #2563EB;
     font-size: 20px;
     transition: 0.3s;
     text-decoration: none;
 }
 
 .contact-social a:hover {
-    color: #4A90E2; /* hover blue */
+    color: #1D4ED8;
 }
 
 /* CTA BUTTONS */
@@ -115,34 +136,56 @@ h2 {
     font-weight: 500;
     transition: 0.3s;
     font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: rgba(255,255,255,0.15);
+    transition: all 0.4s ease;
+    border-radius: 30px;
+}
+
+.cta-btn:hover::after {
+    left: 0;
 }
 
 .cta-primary {
-    background: #FF6F61; /* coral */
+    background: #2563EB;
     color: #FFFFFF;
 }
 
 .cta-primary:hover {
-    background: #E55B50; /* darker coral hover */
+    background: #1D4ED8;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(30,58,138,0.3);
 }
 
 .cta-secondary {
     background: transparent;
-    color: #FF6F61;
-    border: 2px solid #FF6F61;
+    color: #2563EB;
+    border: 2px solid #2563EB;
 }
 
 .cta-secondary:hover {
-    background: #FF6F61;
+    background: #2563EB;
     color: #FFFFFF;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(30,58,138,0.3);
 }
 
 /* FORM STYLING */
 .contact-form {
-    background: #FFFFFF; /* white cards */
+    background: #FFFFFF;
     padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 8px 22px rgba(255,111,97,0.3); /* same shadow as pricing cards */
+    box-shadow: 0 8px 22px rgba(30,58,138,0.2);
     max-width: 500px;
     margin: 40px auto 0;
 }
@@ -153,12 +196,18 @@ h2 {
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 12px;
-    border: 1px solid #FF6F61; /* coral border */
+    border: 1px solid #2563EB;
     font-size: 14px;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #1D4ED8;
+    outline: none;
+}
+
 .contact-form button {
-    background: #FF6F61; /* coral */
+    background: #2563EB;
     color: #FFFFFF;
     border: none;
     padding: 12px 25px;
@@ -169,23 +218,23 @@ h2 {
 }
 
 .contact-form button:hover {
-    background: #E55B50; /* darker coral hover */
+    background: #1D4ED8;
 }
 
 /* FOOTER */
 footer {
-    background: #4A90E2; /* blue footer */
+    background: #1E40AF;
     text-align: center;
     padding: 22px;
     color: #FFFFFF;
 }
 
 footer .contact-social a {
-    color: #FFFFFF; /* footer icons white */
+    color: #FFFFFF;
 }
 
 footer .contact-social a:hover {
-    color: #FF6F61; /* hover coral */
+    color: #2563EB;
 }
 </style>
 </head>
@@ -205,12 +254,15 @@ footer .contact-social a:hover {
 
 <section class="section">
     <h2>Get in Touch</h2>
+    <div class="section-divider"></div>
 
     <div class="contact-info">
-        <p>Email: <a href="mailto:https://formspree.io/f/mkgdejlo">sddrdigitals@gmail.com</a></p>
+        <p>Email: <a href="mailto:sddrdigitals@gmail.com">sddrdigitals@gmail.com</a></p>
         <p>Phone: <a href="tel:+639083131655">+63-908-313-1655</a></p>
         <p>Available: Monday - Sunday | 6AM - 10PM</p>
     </div>
+
+    <div class="section-divider"></div>
 
     <div class="contact-social">
         <a href="https://www.facebook.com/sddrservices" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -218,9 +270,11 @@ footer .contact-social a:hover {
     </div>
 
     <div class="cta-buttons">
-        <a href="mailto:https://formspree.io/f/mkgdejlo" class="cta-btn cta-primary">Email Me</a>
+        <a href="mailto:sddrdigitals@gmail.com" class="cta-btn cta-primary">Email Me</a>
         <a href="tel:+639083131655" class="cta-btn cta-secondary">Call Me</a>
     </div>
+
+    <div class="section-divider"></div>
 
     <div class="contact-form">
         <form action="https://formspree.io/f/mkgdejlo" method="post" enctype="text/plain">
