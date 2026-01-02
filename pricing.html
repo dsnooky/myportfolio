@@ -10,14 +10,14 @@
 <style>
 body {
     font-family: "Poppins", sans-serif;
-    background: #F8F9FA;
-    color: #333333;
+    background: #F4F5F7; /* light professional gray */
+    color: #2C2C2C; 
     margin: 0;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #FF6F61, #FF8A80);
+    background: linear-gradient(135deg, #1E3A8A, #2563EB);
     text-align: center;
     padding: 50px 20px;
     color: #FFFFFF;
@@ -30,6 +30,7 @@ header h1 {
 
 header p {
     font-size: 16px;
+    color: #E0E7FF;
 }
 
 /* STICKY PROMO BANNER */
@@ -38,25 +39,23 @@ header p {
     top: 0;
     z-index: 1000;
     padding: 10px 0;
-    background: transparent;
     text-align: center;
 }
 
 .promo-banner {
     display: inline-block;
     position: relative;
-    background: linear-gradient(135deg, #FF6F61, #FF8A80);
+    background: linear-gradient(135deg, #2563EB, #1E3A8A);
     color: #fff;
     padding: 15px 25px;
     border-radius: 12px;
     font-size: 1.2rem;
     font-weight: 500;
-    box-shadow: 0 6px 15px rgba(255,111,97,0.4);
+    box-shadow: 0 6px 15px rgba(30,58,138,0.4);
     animation: pulse 1.5s infinite alternate, slide 2s infinite alternate;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
-/* Close Button */
 .close-btn {
     position: absolute;
     top: 5px;
@@ -72,14 +71,12 @@ header p {
     color: #000;
 }
 
-/* Pulse Animation */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
 
-/* Slide Animation */
 @keyframes slide {
     0% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
@@ -88,7 +85,7 @@ header p {
 
 /* NAVIGATION */
 nav {
-    background: #4A90E2;
+    background: #1E40AF;
     padding: 12px;
     text-align: center;
 }
@@ -102,7 +99,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #FF6F61;
+    color: #60A5FA;
 }
 
 /* SECTION */
@@ -114,9 +111,18 @@ nav a:hover {
 
 h2 {
     font-family: "Playfair Display", serif;
-    color: #FF6F61;
+    color: #1E3A8A;
     text-align: center;
     margin-bottom: 40px;
+}
+
+/* GRADIENT DIVIDER */
+.section-divider {
+    height: 6px;
+    background: linear-gradient(90deg, #2563EB, #1E3A8A);
+    border-radius: 3px;
+    margin: 40px auto;
+    width: 80%;
 }
 
 /* PRICING GRID */
@@ -131,7 +137,7 @@ h2 {
     background: #FFFFFF;
     padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 8px 22px rgba(255,111,97,0.3);
+    box-shadow: 0 8px 22px rgba(30,58,138,0.2);
     text-align: center;
     transition: 0.3s;
     cursor: pointer;
@@ -139,17 +145,18 @@ h2 {
 
 .pricing-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(255,111,97,0.5);
+    box-shadow: 0 14px 30px rgba(30,58,138,0.35);
 }
 
 .pricing-card h3 {
-    color: #FF6F61;
+    color: #1E3A8A;
     margin-bottom: 15px;
     font-size: 22px;
 }
 
 .pricing-card p {
     margin-bottom: 15px;
+    color: #2C2C2C;
 }
 
 .pricing-card ul {
@@ -166,13 +173,13 @@ h2 {
 .price {
     font-size: 28px;
     font-weight: 600;
-    color: #4A90E2;
+    color: #2563EB;
     margin-bottom: 20px;
 }
 
 /* CTA BUTTON */
 .cta a {
-    background: #FF6F61;
+    background: #2563EB;
     color: #FFFFFF;
     padding: 12px 25px;
     border-radius: 30px;
@@ -182,12 +189,12 @@ h2 {
 }
 
 .cta a:hover {
-    background: #E55B50;
+    background: #1D4ED8;
 }
 
 /* FOOTER */
 footer {
-    background: #4A90E2;
+    background: #1E40AF;
     text-align: center;
     padding: 20px;
     color: #FFFFFF;
@@ -228,6 +235,7 @@ footer {
 
 <section class="section" id="pricing">
     <h2>Choose Your Package</h2>
+    <div class="section-divider"></div>
 
     <div class="pricing-grid">
         <!-- Basic Package -->
@@ -275,6 +283,8 @@ footer {
             </div>
         </div>
     </div>
+
+    <div class="section-divider"></div>
 </section>
 
 <footer>
@@ -283,7 +293,7 @@ footer {
 
 <script>
 function closePromo(event) {
-    event.stopPropagation(); // Prevent redirect when clicking close
+    event.stopPropagation();
     document.getElementById('promoBanner').style.display = 'none';
 }
 </script>
