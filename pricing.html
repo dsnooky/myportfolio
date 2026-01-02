@@ -10,14 +10,14 @@
 <style>
 body {
     font-family: "Poppins", sans-serif;
-    background: #F4F5F7; /* light professional gray */
-    color: #2C2C2C; 
+    background: #F4F5F7;
+    color: #333333;
     margin: 0;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #1E3A8A, #2563EB);
+    background: linear-gradient(135deg, #2563EB, #1E40AF); /* Professional blue gradient */
     text-align: center;
     padding: 50px 20px;
     color: #FFFFFF;
@@ -30,7 +30,6 @@ header h1 {
 
 header p {
     font-size: 16px;
-    color: #E0E7FF;
 }
 
 /* STICKY PROMO BANNER */
@@ -45,7 +44,7 @@ header p {
 .promo-banner {
     display: inline-block;
     position: relative;
-    background: linear-gradient(135deg, #2563EB, #1E3A8A);
+    background: linear-gradient(135deg, #2563EB, #1E40AF);
     color: #fff;
     padding: 15px 25px;
     border-radius: 12px;
@@ -53,7 +52,7 @@ header p {
     font-weight: 500;
     box-shadow: 0 6px 15px rgba(30,58,138,0.4);
     animation: pulse 1.5s infinite alternate, slide 2s infinite alternate;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .close-btn {
@@ -85,7 +84,7 @@ header p {
 
 /* NAVIGATION */
 nav {
-    background: #1E40AF;
+    background: #1E3A8A;
     padding: 12px;
     text-align: center;
 }
@@ -99,7 +98,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #60A5FA;
+    color: #2563EB;
 }
 
 /* SECTION */
@@ -116,15 +115,6 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* GRADIENT DIVIDER */
-.section-divider {
-    height: 6px;
-    background: linear-gradient(90deg, #2563EB, #1E3A8A);
-    border-radius: 3px;
-    margin: 40px auto;
-    width: 80%;
-}
-
 /* PRICING GRID */
 .pricing-grid {
     display: grid;
@@ -134,7 +124,7 @@ h2 {
 
 /* PACKAGE CARDS */
 .pricing-card {
-    background: #FFFFFF;
+    background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 8px 22px rgba(30,58,138,0.2);
@@ -156,7 +146,6 @@ h2 {
 
 .pricing-card p {
     margin-bottom: 15px;
-    color: #2C2C2C;
 }
 
 .pricing-card ul {
@@ -179,7 +168,7 @@ h2 {
 
 /* CTA BUTTON */
 .cta a {
-    background: #2563EB;
+    background: #1E3A8A;
     color: #FFFFFF;
     padding: 12px 25px;
     border-radius: 30px;
@@ -189,12 +178,12 @@ h2 {
 }
 
 .cta a:hover {
-    background: #1D4ED8;
+    background: #2563EB;
 }
 
 /* FOOTER */
 footer {
-    background: #1E40AF;
+    background: #1E3A8A;
     text-align: center;
     padding: 20px;
     color: #FFFFFF;
@@ -215,14 +204,13 @@ footer {
 
 <header>
     <h1>Pricing Packages</h1>
-    <p>Beginner-Friendly • Affordable • Professional</p>
+    <p>Professional • Affordable • Reliable</p>
 </header>
 
-<!-- Sticky Clickable Promo Banner -->
+<!-- Sticky Promo Banner -->
 <section id="promo">
-  <a href="promo-contact.html" class="promo-banner" id="promoBanner">
-    🎉 Special Promo: <strong>20% OFF</strong> on all services! 🎉<br>
-    <span>Valid from Dec 17, 2025 – Jan 1, 2026. Click here to claim!</span>
+  <a href="contact.html" class="promo-banner" id="promoBanner">
+    🎉 Special Promo: <strong>20% OFF</strong> on Website Services! 🎉
     <span class="close-btn" onclick="closePromo(event)">&times;</span>
   </a>
 </section>
@@ -234,18 +222,17 @@ footer {
 </nav>
 
 <section class="section" id="pricing">
-    <h2>Choose Your Package</h2>
-    <div class="section-divider"></div>
+    <h2>Choose Your Service Package</h2>
 
     <div class="pricing-grid">
         <!-- Basic Package -->
         <div class="pricing-card">
             <h3>Basic</h3>
-            <div class="price">$10</div>
-            <p>Perfect for job seekers starting out</p>
+            <div class="price">$15</div>
+            <p>Perfect for starting your online presence</p>
             <ul>
-                <li>Resume Writing</li>
-                <li>Cover Letter</li>
+                <li>Resume / Cover Letter</li>
+                <li>Personal Portfolio Page</li>
             </ul>
             <div class="cta">
                 <a href="contact.html">Hire Now</a>
@@ -255,12 +242,12 @@ footer {
         <!-- Standard Package -->
         <div class="pricing-card">
             <h3>Standard</h3>
-            <div class="price">$25</div>
-            <p>Ideal for those who want a polished profile</p>
+            <div class="price">$40</div>
+            <p>Ideal for small business or professional branding</p>
             <ul>
-                <li>Resume Writing + Editing</li>
-                <li>Cover Letter</li>
-                <li>Portfolio Website</li>
+                <li>Resume + Portfolio Website</li>
+                <li>Business Website (3-5 Pages)</li>
+                <li>Basic SEO Setup</li>
             </ul>
             <div class="cta">
                 <a href="contact.html">Hire Now</a>
@@ -270,21 +257,19 @@ footer {
         <!-- Premium Package -->
         <div class="pricing-card">
             <h3>Premium</h3>
-            <div class="price">$50</div>
-            <p>Complete package for serious online presence</p>
+            <div class="price">$80</div>
+            <p>Complete package for strong digital presence</p>
             <ul>
-                <li>Resume Writing + Editing</li>
-                <li>Cover Letter</li>
-                <li>Business or E-Commerce Website</li>
-                <li>Optional: Social Media Content</li>
+                <li>Professional Resume + Portfolio</li>
+                <li>Business / E-commerce Website</li>
+                <li>Social Media Graphics & Content</li>
+                <li>Advanced SEO & Branding</li>
             </ul>
             <div class="cta">
                 <a href="contact.html">Hire Now</a>
             </div>
         </div>
     </div>
-
-    <div class="section-divider"></div>
 </section>
 
 <footer>
@@ -293,7 +278,7 @@ footer {
 
 <script>
 function closePromo(event) {
-    event.stopPropagation();
+    event.stopPropagation(); 
     document.getElementById('promoBanner').style.display = 'none';
 }
 </script>
