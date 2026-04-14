@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Snooky | Portfolio</title>
+<title>Snooky | Freelancer Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -17,11 +17,11 @@ body {
   color: #fff;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   background: rgba(0,0,0,0.8);
   backdrop-filter: blur(10px);
   display: flex;
@@ -57,6 +57,12 @@ nav a:hover { color: #fff; }
   color: #aaa;
   margin-top: 10px;
   font-size: 18px;
+  min-height: 25px;
+}
+
+.hero p {
+  color: #aaa;
+  max-width: 500px;
 }
 
 .btn {
@@ -64,6 +70,8 @@ nav a:hover { color: #fff; }
   margin-top: 25px;
   padding: 12px 30px;
   border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -78,72 +86,33 @@ nav a:hover { color: #fff; }
   border-top: 1px solid #111;
 }
 
-/* CARDS */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* CARD */
 .card {
   background: #111;
   padding: 25px;
   border: 1px solid #222;
-  transition: 0.4s;
   border-radius: 10px;
+  transition: 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   border: 1px solid #fff;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(255,255,255,0.15);
 }
-
-/* SKILLS */
-.skill {
-  margin: 20px 0;
-}
-
-.skill-bar {
-  background: #222;
-  height: 8px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.skill-bar span {
-  display: block;
-  height: 100%;
-  background: #fff;
-}
-
-/* CONTACT */
-.contact a {
-  display: inline-block;
-  margin: 10px 15px 0 0;
-  color: #aaa;
-  transition: 0.3s;
-}
-
-.contact a:hover { color: #fff; }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   color: #666;
-}
-
-/* ANIMATIONS */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 </style>
 </head>
@@ -154,177 +123,118 @@ footer {
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Case Studies</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <h1>Hi, I'm Snooky 👋</h1>
+  <h1>I Help Businesses Grow Online 🚀</h1>
+
+  <!-- TYPOING EFFECT (KEPT) -->
   <div class="typing" id="typing"></div>
-  <a href="#projects" class="btn">View My Work</a>
+
+  <p>
+    I create high-converting content, modern websites, and digital campaigns 
+    that attract customers and increase sales.
+  </p>
+
+  <a href="#contact" class="btn">Hire Me</a>
 </section>
 
 <!-- ABOUT -->
 <section class="section fade" id="about">
   <h2>About Me</h2>
   <p>
-    I’m a creative digital builder with experience in business operations,
-    customer service, and online marketing. I create clean, modern, and functional websites.
+    I am an IT student and freelancer focused on helping businesses grow through 
+    digital marketing, content creation, and web development.
   </p>
 </section>
 
-<!-- PROJECTS -->
-<section class="section fade" id="projects">
-  <h2>Selected Work</h2>
+<!-- SERVICES -->
+<section class="section fade" id="services">
+  <h2>What I Do</h2>
 
   <div class="grid">
-
-    <!-- PROJECT 1 -->
     <div class="card">
-      <h3>Restaurant Digital Campaign</h3>
-      <p><strong>Client:</strong> Local Food Business</p>
-
-      <p><strong>Goal:</strong><br>
-      Increase daily orders and online engagement.</p>
-
-      <p><strong>Strategy:</strong><br>
-      • Created short-form videos for TikTok and Facebook<br>
-      • Used viral hooks and food close-ups<br>
-      • Posted consistently with targeted captions</p>
-
-      <p><strong>Execution:</strong><br>
-      • 10+ content posts<br>
-      • Promotional captions and offers<br>
-      • Engaging visuals and storytelling</p>
-
-      <p><strong>Results:</strong><br>
-      • Increased customer inquiries<br>
-      • Higher engagement on posts<br>
-      • Improved brand visibility</p>
-
-      <a href="#" class="btn">View Sample</a>
+      <h3>📱 Social Media Marketing</h3>
+      <p>I create engaging content that attracts customers and builds brand awareness.</p>
     </div>
 
-    <!-- PROJECT 2 -->
     <div class="card">
-      <h3>Affiliate Marketing Campaign</h3>
-      <p><strong>Platform:</strong> TikTok & Shopee</p>
-
-      <p><strong>Goal:</strong><br>
-      Promote trending products and generate sales.</p>
-
-      <p><strong>Strategy:</strong><br>
-      • Researched viral products<br>
-      • Created faceless video content<br>
-      • Used persuasive and trending captions</p>
-
-      <p><strong>Execution:</strong><br>
-      • Daily posting system<br>
-      • Product-focused short videos<br>
-      • Strong call-to-action</p>
-
-      <p><strong>Results:</strong><br>
-      • Increased product visibility<br>
-      • Generated clicks and potential conversions</p>
-
-      <a href="#" class="btn">View Demo</a>
+      <h3>🛒 Affiliate Marketing</h3>
+      <p>I promote trending products using viral content strategies.</p>
     </div>
 
-    <!-- PROJECT 3 -->
     <div class="card">
-      <h3>Business Page Growth Strategy</h3>
-
-      <p><strong>Goal:</strong><br>
-      Build online presence and audience engagement.</p>
-
-      <p><strong>Strategy:</strong><br>
-      • Content calendar planning<br>
-      • Mix of value + promotional content<br>
-      • Audience-focused messaging</p>
-
-      <p><strong>Execution:</strong><br>
-      • Consistent posting schedule<br>
-      • Visual branding improvement<br>
-      • Engagement-driven captions</p>
-
-      <p><strong>Results:</strong><br>
-      • Improved page activity<br>
-      • Stronger audience interaction</p>
-
-      <a href="#" class="btn">View Details</a>
+      <h3>💻 Website Development</h3>
+      <p>I build clean, modern, and responsive websites for businesses.</p>
     </div>
-
-  </div>
-</section>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section class="section fade" id="skills">
-  <h2>Skills</h2>
+<!-- CASE STUDIES -->
+<section class="section fade" id="projects">
+  <h2>Case Studies</h2>
 
-  <div class="skill">
-    <p>HTML</p>
-    <div class="skill-bar"><span style="width:90%"></span></div>
+  <div class="card">
+    <h3>📍 Restaurant Growth Campaign</h3>
+    <p><strong>Problem:</strong> Low online engagement and visibility.</p>
+    <p><strong>Solution:</strong> Created viral food content and posting strategy.</p>
+    <p><strong>Result:</strong> Increased engagement and customer inquiries.</p>
   </div>
 
-  <div class="skill">
-    <p>CSS</p>
-    <div class="skill-bar"><span style="width:85%"></span></div>
+  <div class="card">
+    <h3>📍 Affiliate Marketing System</h3>
+    <p><strong>Goal:</strong> Promote trending products online.</p>
+    <p><strong>Strategy:</strong> Faceless viral content + daily posting.</p>
+    <p><strong>Result:</strong> Increased product clicks and visibility.</p>
   </div>
-
-  <div class="skill">
-    <p>JavaScript</p>
-    <div class="skill-bar"><span style="width:70%"></span></div>
-  </div>
-
 </section>
 
 <!-- CONTACT -->
-<section class="section fade contact" id="contact">
-  <h2>Contact</h2>
-  <a href="#">Email</a>
-  <a href="#">Facebook</a>
-  <a href="#">GitHub</a>
+<section class="section fade" id="contact">
+  <h2>Let’s Work Together</h2>
+
+  <p style="color:#aaa; max-width:500px;">
+    Looking for someone to grow your business online? I can help you with content, 
+    marketing, and website creation.
+  </p>
+
+  <a href="mailto:your@email.com" class="btn">Email Me</a>
+  <a href="#" class="btn">Facebook</a>
 </section>
 
 <footer>
-  © 2026 Snooky Portfolio
+  © 2026 Snooky | Freelancer Portfolio
 </footer>
 
+<!-- SCRIPT: TYPING EFFECT -->
 <script>
-/* TYPING EFFECT */
-const text = ["Web Developer", "Resume Builder", "Creative Thinker"];
-let i = 0, j = 0, current = "", isDeleting = false;
+const text = ["Web Developer", "Digital Marketer", "Content Creator"];
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
 
 function type() {
   current = text[i];
   document.getElementById("typing").textContent = current.substring(0, j);
 
-  if (!isDeleting && j < current.length) j++;
-  else if (isDeleting && j > 0) j--;
-  else {
+  if (!isDeleting && j < current.length) {
+    j++;
+  } else if (isDeleting && j > 0) {
+    j--;
+  } else {
     isDeleting = !isDeleting;
     if (!isDeleting) i = (i + 1) % text.length;
   }
 
-  setTimeout(type, isDeleting ? 50 : 100);
+  setTimeout(type, isDeleting ? 60 : 100);
 }
+
 type();
-
-/* SCROLL ANIMATION */
-const fades = document.querySelectorAll(".fade");
-
-window.addEventListener("scroll", () => {
-  fades.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add("show");
-    }
-  });
-});
 </script>
 
 </body>
