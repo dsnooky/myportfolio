@@ -1,351 +1,215 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Snooky Delos Reyes | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snooky | Portfolio</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<!-- Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-    font-family: "Poppins", sans-serif;
-    background: #F4F5F7;
-    color: #2C2C2C;
-    line-height: 1.6;
-}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #1E3A8A, #2563EB);
-    padding: 60px 20px;
-    text-align: center;
-    animation: fadeIn 1.5s ease;
-}
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #222;
+      z-index: 1000;
+    }
 
-header h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 40px;
-    color: #FFFFFF;
-}
+    nav a {
+      color: #aaa;
+      margin: 0 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-header p {
-    font-size: 16px;
-    color: #E0E7FF;
-    margin-top: 8px;
-}
+    nav a:hover {
+      color: #fff;
+    }
 
-/* NAVIGATION */
-nav {
-    background: #1E40AF;
-    padding: 12px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 10%;
+    }
 
-nav a {
-    color: #FFFFFF;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
+    .hero h1 {
+      font-size: 50px;
+      margin: 0;
+    }
 
-nav a:hover {
-    color: #60A5FA;
-}
+    .hero p {
+      color: #aaa;
+      margin: 10px 0;
+    }
 
-/* HERO */
-.hero {
-    background: #FFFFFF;
-    text-align: center;
-    padding: 70px 20px;
-    animation: slideUp 1.3s ease;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-.hero img {
-    width: 160px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(30,58,138,0.3);
-}
+    .btn:hover {
+      background: #fff;
+      color: #000;
+    }
 
-.hero h1 {
-    font-family: "Playfair Display", serif;
-    color: #1E3A8A;
-    margin-bottom: 10px;
-}
+    /* SECTION */
+    .section {
+      padding: 80px 10%;
+      border-top: 1px solid #111;
+    }
 
-.hero p {
-    font-size: 16px;
-    color: #334155;
-    margin-bottom: 20px;
-}
+    h2 {
+      margin-bottom: 20px;
+    }
 
-/* CTA BUTTONS */
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+    /* CARDS */
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      padding: 20px;
+      margin: 15px 0;
+      transition: 0.3s;
+    }
 
-.cta-btn {
-    padding: 12px 26px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
+    .card:hover {
+      border: 1px solid #fff;
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
 
-.cta-btn::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    background: rgba(255,255,255,0.15);
-    transition: all 0.4s ease;
-    border-radius: 30px;
-}
+    /* SKILLS */
+    .skill {
+      margin: 15px 0;
+    }
 
-.cta-btn:hover::after {
-    left: 0;
-}
+    .skill-bar {
+      background: #222;
+      height: 8px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
 
-.cta-primary {
-    background: #2563EB;
-    color: #fff;
-}
+    .skill-bar span {
+      display: block;
+      height: 100%;
+      background: #fff;
+    }
 
-.cta-primary:hover {
-    background: #1D4ED8;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(30,58,138,0.4);
-}
-
-.cta-secondary {
-    background: transparent;
-    color: #2563EB;
-    border: 2px solid #2563EB;
-}
-
-.cta-secondary:hover {
-    background: #2563EB;
-    color: #fff;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(30,58,138,0.4);
-}
-
-/* BUTTON ANIMATION */
-.animate-btn {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideFadeInBtn 0.8s ease forwards;
-}
-
-.animate-btn.delay-1 { animation-delay: 0.5s; }
-.animate-btn.delay-2 { animation-delay: 0.8s; }
-
-@keyframes slideFadeInBtn {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* SECTIONS */
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px 20px;
-    animation: fadeIn 1.5s ease;
-}
-
-h2 {
-    font-family: "Playfair Display", serif;
-    color: #1E3A8A;
-    margin-bottom: 15px;
-}
-
-ul li {
-    margin-bottom: 8px;
-}
-
-/* PROJECTS & PRICING */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 22px;
-}
-
-.project-card, .pricing-card {
-    background: #FFFFFF;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(30,58,138,0.2);
-    transition: 0.3s;
-}
-
-.project-card:hover, .pricing-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 14px 30px rgba(30,58,138,0.35);
-}
-
-/* SECTION DIVIDER */
-.section-divider {
-    height: 6px;
-    background: linear-gradient(90deg, #2563EB, #1E40AF);
-    border-radius: 3px;
-    margin: 40px 0;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    animation: fadeIn 1.2s ease;
-}
-
-/* FOOTER */
-footer {
-    background: #1E3A8A;
-    text-align: center;
-    padding: 22px;
-    color: #FFFFFF;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* FLOATING SOCIAL */
-.floating-social {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 10000;
-}
-
-.floating-social .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #2563EB;
-    color: #FFFFFF;
-    font-size: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.floating-social .social-icon:hover {
-    background: #1D4ED8;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-
-/* MOBILE */
-@media (max-width: 600px) {
-    header h1 { font-size: 28px; }
-}
-</style>
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #111;
+      color: #777;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Snooky Delos Reyes</h1>
-    <p>Your Professional Website Designer</p>
-</header>
-
+<!-- NAVBAR -->
 <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-    <a href="mycertifications.html">Certifications</a>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<section class="hero">
-    <img src="565700590_122230683908106997_546319411512787978_n.jpg" alt="Profile Image">
-    <h1>Bring Your Ideas to Life Online</h1>
-    <p>I design modern, responsive, and user-friendly websites that help businesses and individuals stand out digitally. Let’s create your perfect online presence!</p>
-
-    <div class="cta-buttons">
-        <a href="contact.html" class="cta-btn cta-primary animate-btn delay-1">Hire Me</a>
-        <a href="pricing.html" class="cta-btn cta-secondary animate-btn delay-2">View Pricing</a>
-    </div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <h1>Hi, I'm Snooky 👋</h1>
+  <p>IT Student | Web Developer | Creative Thinker</p>
+  <a href="#projects" class="btn">View My Work</a>
 </section>
 
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am a professional Website Designer with a passion for creating modern, responsive, and visually engaging websites. With nearly six years of experience in digital projects and administrative support, I combine creativity, technical skills, and attention to detail to deliver websites that truly make an impact.</p>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <h2>About Me</h2>
+  <p>
+    I am an IT student with a passion for creating modern websites and digital solutions.
+    I also have experience in customer service, administration, and business operations.
+  </p>
 </section>
 
-<div class="section-divider"></div>
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <h2>Projects</h2>
 
-<section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul>
-        <li>Website Design & Development (Business, Personal, E-commerce)</li>
-        <li>Responsive UI/UX Design</li>
-        <li>HTML, CSS, JavaScript, WordPress</li>
-        <li>Graphic & Content Creation for Web</li>
-        <li>Digital Templates & Branding Materials</li>
-    </ul>
+  <div class="card">
+    <h3>Online Shop Website</h3>
+    <p>E-commerce website connected to social platforms.</p>
+  </div>
+
+  <div class="card">
+    <h3>Restaurant Marketing Page</h3>
+    <p>Created promotional content and digital presence for a restaurant.</p>
+  </div>
+
+  <div class="card">
+    <h3>Affiliate Marketing System</h3>
+    <p>Built a system for promoting trending products online.</p>
+  </div>
+
 </section>
 
-<div class="section-divider"></div>
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <h2>Skills</h2>
 
-<section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects">
-        <div class="project-card">
-            <h3>Business Websites</h3>
-            <p>Modern, responsive websites built to boost brand presence online.</p>
-        </div>
-        <div class="project-card">
-            <h3>Personal Portfolios</h3>
-            <p>Stylish, functional portfolios showcasing individuals and freelancers effectively.</p>
-        </div>
-        <div class="project-card">
-            <h3>E-commerce Platforms</h3>
-            <p>Fully functional online stores optimized for sales and user experience.</p>
-        </div>
-        <div class="project-card">
-            <h3>Web Graphics & Templates</h3>
-            <p>Custom graphics, banners, and templates for websites and social media.</p>
-        </div>
-    </div>
+  <div class="skill">
+    <p>HTML</p>
+    <div class="skill-bar"><span style="width: 90%"></span></div>
+  </div>
+
+  <div class="skill">
+    <p>CSS</p>
+    <div class="skill-bar"><span style="width: 85%"></span></div>
+  </div>
+
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="skill-bar"><span style="width: 70%"></span></div>
+  </div>
+
 </section>
 
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
+  <p>Facebook: yourprofile</p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    © 2025 Snooky Delos Reyes — All Rights Reserved
+  <p>© 2026 Snooky | Portfolio</p>
 </footer>
-
-<!-- Floating Social Bar -->
-<div class="floating-social">
-    <a href="https://www.facebook.com/sddrservices" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.linkedin.com/in/snookydelosreyes" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-</div>
 
 </body>
 </html>
