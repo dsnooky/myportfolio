@@ -120,7 +120,7 @@ nav a:hover { color: #fff; }
   margin-bottom: 10px;
 }
 
-/* IMAGE HOVER (ADS) */
+/* IMAGE HOVER */
 .card img {
   width: 100%;
   border-radius: 10px;
@@ -146,6 +146,53 @@ nav a:hover { color: #fff; }
 
 .card ul li {
   margin-bottom: 8px;
+}
+
+/* MESSENGER BUTTON */
+.messenger-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #0084ff;
+  color: #fff;
+  font-size: 26px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0,132,255,0.6);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.messenger-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0,132,255,1);
+}
+
+/* POPUP */
+.chat-popup {
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  background: #111;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s;
+  z-index: 999;
+}
+
+.chat-popup.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* FOOTER */
@@ -240,12 +287,11 @@ footer {
 </div>
 </section>
 
-<!-- ADS SECTION -->
+<!-- ADS -->
 <section class="section" id="ads">
 <h2><i class="fas fa-bullhorn"></i> Featured Products</h2>
 
 <div class="grid">
-
   <a href="#" target="_blank" class="card">
     <img src="https://via.placeholder.com/400x250">
     <h3>Product 1</h3>
@@ -263,7 +309,6 @@ footer {
     <h3>Product 3</h3>
     <p>Click to view product</p>
   </a>
-
 </div>
 </section>
 
@@ -280,6 +325,15 @@ footer {
 <footer>
 © 2026 Snooky Portfolio
 </footer>
+
+<!-- MESSENGER -->
+<a href="https://m.me/sddrservices" target="_blank" class="messenger-btn">
+  <i class="fab fa-facebook-messenger"></i>
+</a>
+
+<div class="chat-popup" id="chatPopup">
+  💬 Need a website or marketing? Chat me!
+</div>
 
 <script>
 /* TYPING */
@@ -304,6 +358,11 @@ c.classList.add("show");
 }
 });
 });
+
+/* POPUP DELAY */
+setTimeout(()=>{
+document.getElementById("chatPopup").classList.add("show");
+},3000);
 
 /* PARTICLES */
 const canvas=document.getElementById("particles");
