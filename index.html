@@ -19,7 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-/* PARTICLE BACKGROUND */
 #particles {
   position: fixed;
   width: 100%;
@@ -27,7 +26,6 @@ body {
   z-index: -2;
 }
 
-/* GLOW EFFECT */
 body::before {
   content: "";
   position: fixed;
@@ -68,15 +66,9 @@ nav a:hover { color: #fff; }
   padding: 0 10%;
 }
 
-.hero h1 {
-  font-size: 55px;
-}
+.hero h1 { font-size: 55px; }
 
-.typing {
-  color: #aaa;
-  margin: 10px 0;
-  min-height: 25px;
-}
+.typing { color: #aaa; margin: 10px 0; min-height: 25px; }
 
 .btn {
   margin-top: 20px;
@@ -86,10 +78,7 @@ nav a:hover { color: #fff; }
   text-decoration: none;
 }
 
-.btn:hover {
-  background: #fff;
-  color: #000;
-}
+.btn:hover { background: #fff; color: #000; }
 
 /* SECTION */
 .section {
@@ -131,6 +120,22 @@ nav a:hover { color: #fff; }
   margin-bottom: 10px;
 }
 
+/* PRICING */
+.price {
+  font-size: 28px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.card ul {
+  padding-left: 18px;
+  color: #aaa;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -148,7 +153,7 @@ footer {
 <nav>
   <a href="#home">Home</a>
   <a href="#services">Services</a>
-  <a href="#projects">Projects</a>
+  <a href="#pricing">Pricing</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -161,7 +166,7 @@ footer {
 </section>
 
 <!-- SERVICES -->
-<section class="section">
+<section class="section" id="services">
 <h2><i class="fas fa-briefcase"></i> Services</h2>
 
 <div class="grid">
@@ -185,20 +190,50 @@ footer {
 </div>
 </section>
 
-<!-- PROJECTS -->
-<section class="section" id="projects">
-<h2><i class="fas fa-chart-line"></i> Case Studies</h2>
+<!-- PRICING -->
+<section class="section" id="pricing">
+<h2><i class="fas fa-tags"></i> Pricing</h2>
 
 <div class="grid">
+
   <div class="card">
-    <h3>Restaurant Marketing</h3>
-    <p>Boosted engagement using viral content.</p>
+    <i class="fas fa-seedling"></i>
+    <h3>Starter</h3>
+    <div class="price">₱2,999</div>
+    <ul>
+      <li>Basic Website / Landing Page</li>
+      <li>Mobile Responsive</li>
+      <li>Simple Design</li>
+    </ul>
+    <a href="#contact" class="btn">Get Started</a>
   </div>
 
   <div class="card">
-    <h3>Affiliate System</h3>
-    <p>Increased clicks using TikTok strategy.</p>
+    <i class="fas fa-rocket"></i>
+    <h3>Growth</h3>
+    <div class="price">₱6,999</div>
+    <ul>
+      <li>Full Website (Multi-section)</li>
+      <li>Modern UI Design</li>
+      <li>Basic SEO Setup</li>
+      <li>Social Media Integration</li>
+    </ul>
+    <a href="#contact" class="btn">Get Started</a>
   </div>
+
+  <div class="card">
+    <i class="fas fa-crown"></i>
+    <h3>Premium</h3>
+    <div class="price">₱12,999</div>
+    <ul>
+      <li>Advanced Website</li>
+      <li>Marketing Strategy</li>
+      <li>Conversion Optimization</li>
+      <li>Priority Support</li>
+    </ul>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+
 </div>
 </section>
 
@@ -230,12 +265,13 @@ setTimeout(type,del?60:100);
 }
 type();
 
-/* FADE IN */
+/* FADE */
 const cards=document.querySelectorAll(".card");
 window.addEventListener("scroll",()=>{
 cards.forEach(c=>{
-const top=c.getBoundingClientRect().top;
-if(top<window.innerHeight-100) c.classList.add("show");
+if(c.getBoundingClientRect().top<window.innerHeight-100){
+c.classList.add("show");
+}
 });
 });
 
@@ -245,32 +281,26 @@ const ctx=canvas.getContext("2d");
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 
-let particles=[];
+let p=[];
 for(let i=0;i<80;i++){
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2,
-dx:(Math.random()-0.5),
-dy:(Math.random()-0.5)
-});
+p.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2,dx:(Math.random()-0.5),dy:(Math.random()-0.5)});
 }
 
-function animate(){
+function draw(){
 ctx.clearRect(0,0,canvas.width,canvas.height);
-particles.forEach(p=>{
+p.forEach(a=>{
 ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.arc(a.x,a.y,a.r,0,Math.PI*2);
 ctx.fillStyle="white";
 ctx.fill();
-p.x+=p.dx;
-p.y+=p.dy;
-if(p.x<0||p.x>canvas.width)p.dx*=-1;
-if(p.y<0||p.y>canvas.height)p.dy*=-1;
+a.x+=a.dx;
+a.y+=a.dy;
+if(a.x<0||a.x>canvas.width)a.dx*=-1;
+if(a.y<0||a.y>canvas.height)a.dy*=-1;
 });
-requestAnimationFrame(animate);
+requestAnimationFrame(draw);
 }
-animate();
+draw();
 </script>
 
 </body>
