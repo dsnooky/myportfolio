@@ -120,6 +120,18 @@ nav a:hover { color: #fff; }
   margin-bottom: 10px;
 }
 
+/* IMAGE HOVER (ADS) */
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
 /* PRICING */
 .price {
   font-size: 28px;
@@ -154,6 +166,7 @@ footer {
   <a href="#home">Home</a>
   <a href="#services">Services</a>
   <a href="#pricing">Pricing</a>
+  <a href="#ads">Products</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -195,44 +208,61 @@ footer {
 <h2><i class="fas fa-tags"></i> Pricing</h2>
 
 <div class="grid">
-
   <div class="card">
-    <i class="fas fa-seedling"></i>
     <h3>Starter</h3>
     <div class="price">₱2,999</div>
     <ul>
-      <li>Basic Website / Landing Page</li>
-      <li>Mobile Responsive</li>
+      <li>Basic Website</li>
+      <li>Responsive</li>
       <li>Simple Design</li>
     </ul>
-    <a href="#contact" class="btn">Get Started</a>
   </div>
 
   <div class="card">
-    <i class="fas fa-rocket"></i>
     <h3>Growth</h3>
     <div class="price">₱6,999</div>
     <ul>
-      <li>Full Website (Multi-section)</li>
-      <li>Modern UI Design</li>
-      <li>Basic SEO Setup</li>
-      <li>Social Media Integration</li>
+      <li>Full Website</li>
+      <li>Modern UI</li>
+      <li>SEO Setup</li>
     </ul>
-    <a href="#contact" class="btn">Get Started</a>
   </div>
 
   <div class="card">
-    <i class="fas fa-crown"></i>
     <h3>Premium</h3>
     <div class="price">₱12,999</div>
     <ul>
       <li>Advanced Website</li>
       <li>Marketing Strategy</li>
-      <li>Conversion Optimization</li>
       <li>Priority Support</li>
     </ul>
-    <a href="#contact" class="btn">Get Started</a>
   </div>
+</div>
+</section>
+
+<!-- ADS SECTION -->
+<section class="section" id="ads">
+<h2><i class="fas fa-bullhorn"></i> Featured Products</h2>
+
+<div class="grid">
+
+  <a href="#" target="_blank" class="card">
+    <img src="https://via.placeholder.com/400x250">
+    <h3>Product 1</h3>
+    <p>Click to view product</p>
+  </a>
+
+  <a href="#" target="_blank" class="card">
+    <img src="https://via.placeholder.com/400x250">
+    <h3>Product 2</h3>
+    <p>Click to view product</p>
+  </a>
+
+  <a href="#" target="_blank" class="card">
+    <img src="https://via.placeholder.com/400x250">
+    <h3>Product 3</h3>
+    <p>Click to view product</p>
+  </a>
 
 </div>
 </section>
