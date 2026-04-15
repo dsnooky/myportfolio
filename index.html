@@ -6,6 +6,7 @@
 <title>Snooky | Freelancer Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 html { scroll-behavior: smooth; }
@@ -15,12 +16,32 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #0a0a0a;
   color: #fff;
+  overflow-x: hidden;
+}
+
+/* PARTICLE BACKGROUND */
+#particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+/* GLOW EFFECT */
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.07), transparent);
+  top: -150px;
+  left: -150px;
+  z-index: -1;
 }
 
 /* NAV */
 nav {
   position: fixed;
-  top: 0;
   width: 100%;
   background: rgba(0,0,0,0.8);
   backdrop-filter: blur(10px);
@@ -34,7 +55,6 @@ nav a {
   color: #aaa;
   margin: 0 20px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 nav a:hover { color: #fff; }
@@ -50,29 +70,20 @@ nav a:hover { color: #fff; }
 
 .hero h1 {
   font-size: 55px;
-  margin: 0;
 }
 
 .typing {
   color: #aaa;
-  margin-top: 10px;
-  font-size: 18px;
+  margin: 10px 0;
   min-height: 25px;
 }
 
-.hero p {
-  color: #aaa;
-  max-width: 500px;
-}
-
 .btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 30px;
+  margin-top: 20px;
+  padding: 12px 25px;
   border: 1px solid #fff;
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 .btn:hover {
@@ -89,7 +100,7 @@ nav a:hover { color: #fff; }
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
 }
 
@@ -97,15 +108,27 @@ nav a:hover { color: #fff; }
 .card {
   background: #111;
   padding: 25px;
+  border-radius: 12px;
   border: 1px solid #222;
-  border-radius: 10px;
   transition: 0.4s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card:hover {
   transform: translateY(-8px);
   border: 1px solid #fff;
-  box-shadow: 0 0 20px rgba(255,255,255,0.15);
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.card i {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 /* FOOTER */
@@ -119,122 +142,135 @@ footer {
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <!-- NAV -->
 <nav>
   <a href="#home">Home</a>
-  <a href="#about">About</a>
   <a href="#services">Services</a>
-  <a href="#projects">Case Studies</a>
+  <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <h1>I Help Businesses Grow Online 🚀</h1>
-
-  <!-- TYPOING EFFECT (KEPT) -->
+  <h1>I Help Businesses Grow 🚀</h1>
   <div class="typing" id="typing"></div>
-
-  <p>
-    I create high-converting content, modern websites, and digital campaigns 
-    that attract customers and increase sales.
-  </p>
-
+  <p>I create websites, content, and marketing systems that bring customers.</p>
   <a href="#contact" class="btn">Hire Me</a>
 </section>
 
-<!-- ABOUT -->
-<section class="section fade" id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a freelancer focused on helping businesses grow through 
-    digital marketing, content creation, and web development.
-  </p>
-</section>
-
 <!-- SERVICES -->
-<section class="section fade" id="services">
-  <h2>What I Do</h2>
+<section class="section">
+<h2><i class="fas fa-briefcase"></i> Services</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>📱 Social Media Marketing</h3>
-      <p>I create engaging content that attracts customers and builds brand awareness.</p>
-    </div>
-
-    <div class="card">
-      <h3>🛒 Affiliate Marketing</h3>
-      <p>I promote trending products using viral content strategies.</p>
-    </div>
-
-    <div class="card">
-      <h3>💻 Website Development</h3>
-      <p>I build clean, modern, and responsive websites for businesses.</p>
-    </div>
+<div class="grid">
+  <div class="card">
+    <i class="fab fa-facebook"></i>
+    <h3>Social Media</h3>
+    <p>Grow your audience and engagement.</p>
   </div>
+
+  <div class="card">
+    <i class="fas fa-shopping-cart"></i>
+    <h3>Affiliate Marketing</h3>
+    <p>Viral product promotions that sell.</p>
+  </div>
+
+  <div class="card">
+    <i class="fas fa-code"></i>
+    <h3>Web Development</h3>
+    <p>Modern websites that convert clients.</p>
+  </div>
+</div>
 </section>
 
-<!-- CASE STUDIES -->
-<section class="section fade" id="projects">
-  <h2>Case Studies</h2>
+<!-- PROJECTS -->
+<section class="section" id="projects">
+<h2><i class="fas fa-chart-line"></i> Case Studies</h2>
 
+<div class="grid">
   <div class="card">
-    <h3>📍 Restaurant Growth Campaign</h3>
-    <p><strong>Problem:</strong> Low online engagement and visibility.</p>
-    <p><strong>Solution:</strong> Created viral food content and posting strategy.</p>
-    <p><strong>Result:</strong> Increased engagement and customer inquiries.</p>
+    <h3>Restaurant Marketing</h3>
+    <p>Boosted engagement using viral content.</p>
   </div>
 
   <div class="card">
-    <h3>📍 Affiliate Marketing System</h3>
-    <p><strong>Goal:</strong> Promote trending products online.</p>
-    <p><strong>Strategy:</strong> Faceless viral content + daily posting.</p>
-    <p><strong>Result:</strong> Increased product clicks and visibility.</p>
+    <h3>Affiliate System</h3>
+    <p>Increased clicks using TikTok strategy.</p>
   </div>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section class="section fade" id="contact">
-  <h2>Let’s Work Together</h2>
+<section class="section" id="contact">
+<h2><i class="fas fa-envelope"></i> Contact</h2>
 
-  <p style="color:#aaa; max-width:500px;">
-    Looking for someone to grow your business online? I can help you with content, 
-    marketing, and website creation.
-  </p>
+<p>Let’s grow your business.</p>
 
-  <a href="mailto:sddrdigitals@gmail.com" class="btn">Email Me</a>
-  <a href="https://web.facebook.com/sddrservices" class="btn">Facebook</a>
+<a href="mailto:sddrdigitals@gmail.com" class="btn">Email</a>
+<a href="https://web.facebook.com/sddrservices" class="btn">Facebook</a>
 </section>
 
 <footer>
-  © 2026 Snooky | Freelancer Portfolio
+© 2026 Snooky Portfolio
 </footer>
 
-<!-- SCRIPT: TYPING EFFECT -->
 <script>
-const text = ["Web Developer", "Digital Marketer", "Content Creator"];
-let i = 0;
-let j = 0;
-let current = "";
-let isDeleting = false;
+/* TYPING */
+const words=["Web Developer","Digital Marketer","Content Creator"];
+let i=0,j=0,cur="",del=false;
+function type(){
+cur=words[i];
+document.getElementById("typing").textContent=cur.substring(0,j);
+if(!del && j<cur.length) j++;
+else if(del && j>0) j--;
+else{del=!del;if(!del)i=(i+1)%words.length;}
+setTimeout(type,del?60:100);
+}
+type();
 
-function type() {
-  current = text[i];
-  document.getElementById("typing").textContent = current.substring(0, j);
+/* FADE IN */
+const cards=document.querySelectorAll(".card");
+window.addEventListener("scroll",()=>{
+cards.forEach(c=>{
+const top=c.getBoundingClientRect().top;
+if(top<window.innerHeight-100) c.classList.add("show");
+});
+});
 
-  if (!isDeleting && j < current.length) {
-    j++;
-  } else if (isDeleting && j > 0) {
-    j--;
-  } else {
-    isDeleting = !isDeleting;
-    if (!isDeleting) i = (i + 1) % text.length;
-  }
+/* PARTICLES */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
-  setTimeout(type, isDeleting ? 60 : 100);
+let particles=[];
+for(let i=0;i<80;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2,
+dx:(Math.random()-0.5),
+dy:(Math.random()-0.5)
+});
 }
 
-type();
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+particles.forEach(p=>{
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="white";
+ctx.fill();
+p.x+=p.dx;
+p.y+=p.dy;
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
+});
+requestAnimationFrame(animate);
+}
+animate();
 </script>
 
 </body>
